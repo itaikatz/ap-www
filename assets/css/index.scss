@@ -10,6 +10,7 @@
 }
 #banner-image {
 	z-index: 1;
+	
 	background-image: url("{{site.baseurl}}/assets/images/robot_bg3_gray_8bit.png");
 	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
 	background-repeat:no-repeat;
@@ -23,39 +24,48 @@
 	width: 40%;
 	z-index: 1;
 	position: absolute;
-	transform: translate(10%, 15%);
-}
+	//transform: translate(10%, 15%);
+	top: 25%;
+	left: 5%;
 
-.heading {
-	z-index: 1;
-	//color: #aaa;
-	color: #d5e9f6;
-}
+	//.heading {
+		//color: #aaa;
+	//}
 
-#heading-a {
-	font-size: 3vw;
-	font-weight: bold;
-}
-#heading-b {
-	font-size: 1.5vw;
-	font-weight: lighter;
-	margin-top: 10px;
+	#heading-a {
+		color: #d5e9f6;
+		z-index: 1;
+		font-size: 3vw;
+		font-weight: bold;
+		//position: absolute;
+		//top: 30%;
+	}
+	#heading-b {
+		color: #d5e9f6;
+		z-index: 1;
+		font-size: 1.5vw;
+		font-weight: lighter;
+		margin-top: 10px;
+	}
 }
 
 a.button {
 display: inline-block;
 	text-decoration: none;
-	margin-top: 20px;
-	margin-right: 10px;
+	margin-top: 3vw;
+	//margin-right: 10px;
 	border: none;
-	padding: 10px 20px;
+	//padding: 10px 20px;
+	padding: 1vw;
 	border-radius: 5px;
 	font: inherit;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 1vw;
 }
 #learn {
-	padding: 11px 21px;
+	margin-right: 3vw;
+	//padding: 11px 21px;
+	padding: 1.1vw 1.5vw;
 	color: #5b5b5b;
 	background-color: #fada73;	
 	

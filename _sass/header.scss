@@ -1,3 +1,5 @@
+@media only screen and (min-width: $screen-sm) {
+
 // Allow banner picture to "go through" nav bar (for transparent nav bars)
 header.transparent + .page-content {
 	padding-top: 0;
@@ -154,3 +156,7 @@ nav.shrink {
 	border: 0.5px solid white;
 	border-radius: 5px;
 }
+
+
+}
+

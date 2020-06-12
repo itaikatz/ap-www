@@ -8,8 +8,8 @@ transparent_nav: true
 <div class="banner">
 <div id="banner-image"></div>
 <div id="banner-text">
-	<div class="heading" id="heading-a">Cutting edge science for<br/> challenging problems</div>
-	<div class="heading" id="heading-b">Applied Photons is dedicated to novel engineering solutions across the entire development pipeline.</div>
+	<div id="heading-a">Cutting edge science for<br/> challenging problems</div>
+	<div id="heading-b">Applied Photons is dedicated to novel engineering solutions across the entire development pipeline.</div>
 	<a href="about.html" class="button" id="learn">Learn more</a>
 	<a href="portfolio.html" class="button" id="portfolio">See our portfolio</a>
 </div>

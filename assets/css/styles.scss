@@ -1,10 +1,14 @@
 ---
 ---
+// Site variables
+$screen-sm: 480px;
+
+// Includes	
 @import "main";
-@import "header";
+@import "burger";
+@import "header2";
 @import "footer";
 @import "labeled-heading";
-
 
 
 

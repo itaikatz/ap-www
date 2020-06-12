@@ -17,27 +17,30 @@
   </head>
   <body>
 
-	<!-- <div class="pre-header"></div> -->
+	<div class="header-wrapper {% if page.transparent_nav==true %} transparent {% endif%}">
+	<header>
+	  <a href="index.html" class="logo">
+	      <span id="Applied">Applied</span><span id="Photons">Photons</span>
+	  </a>
 
 
-	<header {% if page.transparent_nav==true %} class=transparent {% endif%}>
-		<nav {% if page.transparent_nav==true %} class=transparent {% endif%}>
-		<div class="nav-content">
-			<a href="index.html" class="nav-left">
-					<span id="Applied">Applied</span><span id="Photons">Photons</span>
-			</a>
-			<div class="nav-right">
-				<ul class="navigation" role="navigation">
-					<li><a href="{{site.baseurl}}/about.html">About</a></li>
-					<li><a href="{{site.baseurl}}/portfolio.html">Portfolio</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#" id="contact-button">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-		</nav>
+	  <nav>
+	    <ul class="navigation" role="navigation">
+	      <li><a href="{{site.baseurl}}/about.html">About</a></li>
+	      <li><a href="{{site.baseurl}}/portfolio.html">Portfolio</a></li>
+	      <li><a href="#">Blog</a></li>
+	      <li><a href="#" id="contact-button">Contact</a></li>
+	    </ul>
+
+	  <!-- "Hamburger icon" to toggle the navigation links -->
+	  <a href="#" class="menu-button" id="menuButton">
+	    <span class="burger-icon"></span>
+	  </a>
+
+	  </nav>
+
 	</header>
-
+	</div>
 
   	<div class="page-content">
     	{{ content }}
@@ -53,23 +56,34 @@
 
 
 	<script>
-	window.addEventListener('load', function() {
-     	var scrollThresh = 80;
-     	var classSelector = document.querySelector("nav").classList;
-     	function navbar_shrink() {
-     		if (document.documentElement.scrollTop > scrollThresh) { 
-    			classSelector.add("shrink");
-    		} else { 
-    			classSelector.remove("shrink"); 
-    		}
-    	}
-    
-     	navbar_shrink();
-    	window.onscroll = navbar_shrink;
-    
+	  window.addEventListener('load', function() {
 
-	});
-	</script>
+      // Set up hamburger menu icon animation
+      var menuButton = document.getElementById('menuButton');
+      menuButton.addEventListener('click', function (e) {
+        menuButton.classList.toggle('is-active');
+        e.preventDefault();
+
+        var navMenu = document.getElementsByClassName("navigation")[0];
+        navMenu.classList.toggle('visible');
+      });
+
+      // Set up navbar shrink when scrolling
+      var scrollThresh = 80;
+      var classSelector = document.querySelector(".header-wrapper").classList;
+      function navbar_shrink() {
+        if (document.documentElement.scrollTop > scrollThresh) { 
+          classSelector.add("shrink");
+        } else { 
+          classSelector.remove("shrink"); 
+        }
+      }
+      window.onscroll = navbar_shrink;
+    
+    // Housekeeping items to run on page load
+    navbar_shrink();
+  });
+  	</script>
 
   </body>
 </html>

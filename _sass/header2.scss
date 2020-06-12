@@ -1,0 +1,206 @@
+///////////////////////////////////////
+// Common (mobile+desktop) attributes
+///////////////////////////////////////
+
+.header-wrapper {
+	width: 100%;
+	box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+	backdrop-filter: blur(2px);
+	background-color: rgba(200,200,200,0.9);
+}
+header {
+	a { 
+		text-decoration: none;
+	}
+	ul {
+		list-style: none;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	li a {
+		color: #091d2a;
+	}
+	#Applied {
+		color: #0d2b3f;
+		font-weight: 900;
+	}
+	#Photons {
+		color: #091d2a;
+		font-weight: normal;
+	}
+}
+
+
+///////////////////////////////////////
+// Mobile-only attributes
+// (overwritten by desktop, below)
+///////////////////////////////////////
+@media only screen and (max-width: 480px) {
+header {
+	position: relative;
+	padding: 8px;
+
+	ul {
+		&.visible {
+			display: block;
+		}
+		display: none;
+		padding: 0 32px;
+	}
+	li {
+		border-top: 1px solid #b8b8b8;
+		padding: 10px 0;
+	}
+	.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		//right: 0;
+		//top: 50%;
+		//transform: translateY(-50%);
+	}
+	.logo {
+		font-size: 5vw;
+		position: relative;
+		display: inline-block;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.burger-icon {
+		@include burger(25px, 3px, 5px, #444);
+	}
+	.menu-button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateY(15%);
+	}
+
+	.menu-button.is-active .burger-icon {
+		@include burger-to-cross;
+	}
+
+	.menu-button {
+		display: inline-block;
+		padding: .5em;
+		//background-color: #fafafa;
+		//border: 1px solid #ccc;
+	}
+
+}
+}
+///////////////////////////////////////
+// Desktop-only attributes
+///////////////////////////////////////
+
+@media only screen and (min-width: 481px) {
+
+// push body down if page has non-transparent header
+.header-wrapper:not(.transparent) + .page-content {
+	padding-top: 60px;
+}
+
+.header-wrapper {
+	position: fixed; top: 0;
+	z-index: 998;
+	transition: all 0.3s;
+	
+}
+
+header {
+	display: flex;
+	width: 95%;
+	margin: 0 auto;
+
+	.logo {
+		z-index: 999;
+		flex: 0;
+		font-size: 32px;
+		margin: 8px 0;
+		transition: all 0.3s;		
+	}
+
+	.icon {
+		display: none;
+	}
+
+	nav {
+		z-index: 999;
+		flex: 1;
+		align-self: stretch;
+		padding: 8px 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		text-align: right;
+		transition: all 0.3s;		
+	}
+	li {
+		height: 100%;
+		display: inline-block;
+		a {
+			height: 100%;
+			padding: 0 8px;
+			margin: 0 8px;
+			display: flex;
+			align-self: stretch;
+			align-items: center;
+  			transition: color 0.3s;
+		}
+		a:hover {
+			color: #57a6db;
+		}
+
+	}
+	#contact-button {
+		border: 0.5px solid white;
+		border-radius: 5px;
+	}
+}
+
+.header-wrapper.transparent:not(.shrink) { // Override if transparent (e.g. for hero banner)
+	background-color: transparent;
+	backdrop-filter: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: none;
+
+	li a {
+		color: #d5e9f6;
+		&:hover {
+			color: #57a6db;
+		}
+	}
+	
+	#Applied {
+		color: #d5e9f6;
+	}
+	#Photons {
+		color: #abd3ed;
+	}
+
+	// Scrim gradient for transparent header
+	&:before {
+		content: '';
+		z-index: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.2) 60%, rgba(0,0,0,0));
+
+	}
+}
+.header-wrapper.shrink {  // Override if scrolling
+	.logo {
+		font-size: 25px;
+		margin: 5px 0;
+	}
+	ul {
+		font-size: 13px;
+	}
+}
+} // media query for large screen

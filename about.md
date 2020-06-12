@@ -11,12 +11,6 @@ css: assets/css/about.css
 			Recent years have seen tremendous growth in the capability of autonomous systems. Every day new breakthroughs are published from research labs around the world. Applied Photons LLC was founded in 2020 with the goal of translating this cutting edge academic research to real-world challenges. From biomedical engineering to undersea robotics to autonomous vehicles, we are solving our clients’ most complex problems with efficient systems and innovative design. Contact us to learn how Applied Photons can take you to the future. <a href="{{site.baseurl}}/assets/images/delorean.jpg" alt="delorean">No delorean necessary.</a>  
 			
 
-		<!-- </div> -->
-		<!-- <div class="image"> -->
-			<!-- <img src="https://via.placeholder.com/300"> -->
-		<!-- </div> -->
-	<!-- </div> -->
-	<!-- <div class="heading">Founder</div> -->
 	<div class="callout">
 		<div class="image">
 			<img src="{{site.baseurl}}/assets/images/itai.jpg">
