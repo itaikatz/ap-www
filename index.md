@@ -1,5 +1,5 @@
 ---
-layout: default2
+layout: default
 title: index
 css: assets/css/index.css
 transparent_nav: true

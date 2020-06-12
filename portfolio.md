@@ -1,5 +1,5 @@
 ---
-layout: default2
+layout: default
 title: Portfolio
 css: assets/css/portfolio.css
 js: assets/js/portfolio.js

@@ -1,0 +1,14 @@
+footer {
+	z-index: 999;
+	flex: none;
+	padding: 10px 0 10px 0;
+	background-image: linear-gradient(#2d2d2d, #252525);
+	border-top: 1px solid #1a1a1a;	
+}
+.footer-content {
+	width: 95%;
+	margin: 0 auto;
+	align-self: center;
+	color: #656565;
+	font-size: 16px;
+}
