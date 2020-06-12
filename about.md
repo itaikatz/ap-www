@@ -3,6 +3,7 @@ layout: default2
 title: About us
 css: assets/css/about.css
 ---
+
 <div class="content">
 	<div class="heading">About us</div>
 	<div class="callout">
