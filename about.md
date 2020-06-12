@@ -8,7 +8,7 @@ css: assets/css/about.css
 	<div class="heading">About us</div>
 	<div class="callout">
 		<div class="text">
-			Recent years have seen tremendous growth in the capability of autonomous systems. Almost every day a new breakthrough is published from research labs around the world. Applied Photons LLC was founded in 2020 with the goal combining cutting edge academic research with real-world challeneges. From biomedical engineering to undersea robotics to autonomous vehiciles, we are solving our clients’ most complex problems with efficient systems and innovative design. Contact us to learn how Applied Photons can contribute to your organization. 
+			Recent years have seen tremendous growth in the capability of autonomous systems. Every day new breakthroughs are published from research labs around the world. Applied Photons LLC was founded in 2020 with the goal combining cutting edge academic research with real-world challeneges. From biomedical engineering to undersea robotics to autonomous vehiciles, we are solving our clients’ most complex problems with efficient systems and innovative design. Contact us to learn how Applied Photons can contribute to your organization. 
 		</div>
 		<div class="image">
 			<img src="https://via.placeholder.com/300">
