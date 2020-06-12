@@ -4,31 +4,104 @@
 	z-index: 1;
 	flex: 0;
 	position: relative;
+
 	width: 100%;
-	padding-bottom: 30%; // ~height/width
+	padding-bottom: 35%; // ~height/width
 }
-#bg-image {
+#banner-image {
 	z-index: 1;
-	//background-image: url("{{site.baseurl}}/assets/images/robot_bg.png");
-	background-image: url("{{site.baseurl}}/assets/images/abstract_background.png");
+	background-image: url("{{site.baseurl}}/assets/images/robot_bg3_gray_8bit.png");
+	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
 	background-repeat:no-repeat;
 	background-size:contain;
 	width: 100%;
-	padding-bottom: 30%; // ~height/width
+	padding-bottom: 35%; // ~height/width
 	position: absolute; 
+}
+
+#banner-text {
+	width: 40%;
+	z-index: 1;
+	position: absolute;
+	transform: translate(10%, 60%);
 }
 
 .heading {
 	z-index: 1;
-	font-size: 3vw;
-	color: #aaa;
-	font-weight: bold;
-	text-transform: uppercase;
-	//transform: translateY(50%);
-	height: 100%;
-	width: 50%;
-	position: absolute;
+	//color: #aaa;
+	color: #d5e9f6;
 }
+
+#heading-a {
+	font-size: 3vw;
+	font-weight: bold;
+}
+#heading-b {
+	font-size: 1.5vw;
+	font-weight: lighter;
+	margin-top: 10px;
+}
+
+a.button {
+display: inline-block;
+	text-decoration: none;
+	margin-top: 20px;
+	margin-right: 10px;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font: inherit;
+	font-weight: bold;
+	font-size: 14px;
+}
+#learn {
+	padding: 11px 21px;
+	color: #5b5b5b;
+	background-color: #fada73;	
+	
+	&:hover {
+		background-color: #fce8a6;
+	}
+}
+#portfolio {
+	color: #ccc;
+	border: 1px solid #ccc;
+	background-color: transparent;
+
+	&:hover {
+		color: #e6e6e6;
+		border-color: #e6e6e6;
+	}
+}
+/*
+button {
+	margin-top: 20px;
+	margin-right: 10px;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font: inherit;
+	font-weight: bold;
+	font-size: 14px;
+
+	a {
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		color: inherit;
+	}
+}
+#learn {
+	padding: 11px 21px;
+	color: #5b5b5b;
+	background-color: #fada73;
+}
+#portfolio {
+	color: #ccc;
+	border: 1px solid #ccc;
+	background-color: transparent;
+}
+*/
 	#heading1 {
 		opacity: 0;
 		height: 100%;
@@ -53,18 +126,18 @@
 
 
 @keyframes slide20x {
-	0% {transform: translate(40%, 20%);}
-	100% {transform: translate(10%, 20%);}
+	0% {transform: translate(40%, 30%);}
+	100% {transform: translate(10%, 30%);}
 }
 
 @keyframes slide35x {
-	0% {transform: translate(50%, 40%);}
-	100% {transform: translate(20%, 40%);}
+	0% {transform: translate(50%, 50%);}
+	100% {transform: translate(20%, 50%);}
 }
 
 @keyframes slide50x {
-	0% {transform: translate(60%, 60%);}
-	100% {transform: translate(30%, 60%);}
+	0% {transform: translate(60%, 70%);}
+	100% {transform: translate(30%, 70%);}
 }
 
 

@@ -1,29 +1,24 @@
 ---
-layout: default
-title: index.md
+layout: default2
+title: index
 css: assets/css/index.css
+transparent_nav: true
 ---
+
 <div class="banner">
-<div id="bg-image"></div>
+<div id="banner-image"></div>
+<div id="banner-text">
+	<div class="heading" id="heading-a">Cutting edge science for<br/> challenging problems</div>
+	<div class="heading" id="heading-b">Applied Photons is dedicated to novel engineering solutions across the entire development pipeline.</div>
+	<a href="about.html" class="button" id="learn">Learn more</a>
+	<a href="portfolio.html" class="button" id="portfolio">See our portfolio</a>
+</div>
+<!-- 
 <div class="heading" id="heading1">Computer vision</div>
 <div class="heading" id="heading2">Machine learning</div>
 <div class="heading" id="heading3">Robotics</div>
+ -->
 </div>
-<!-- <img src="assets/images/abstract-art-blur-2000x1200.jpg" alt="abtract design"> -->
-<div id="content">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-	<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-	<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-	<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-	<br/><br/>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. Mauris elementum faucibus nulla, at blandit diam finibus nec. Aenean mi velit, tempor quis erat a, euismod facilisis erat. Integer eget mollis sem. Curabitur fringilla mollis ornare. Donec in sem quis massa convallis efficitur. Nullam ut lacus laoreet, volutpat justo ac, gravida felis. In hac habitasse platea dictumst. Nullam vestibulum facilisis velit, quis vehicula velit commodo sed. Aenean varius luctus cursus. Aliquam nec ligula quis risus consequat commodo a a lorem. Nam consequat non lectus sit amet eleifend. Duis congue, ipsum vitae commodo interdum, risus ex feugiat erat, non tristique tortor massa a justo.
-</div>
+
+ <h2 style="text-align: center"> Computer vision &#5867; Robotics &#5867; Machine learning </h2>
+
