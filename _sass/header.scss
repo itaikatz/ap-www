@@ -1,0 +1,18 @@
+header {
+	.pre-header {
+		background-color: #477fbb;
+		height: 10px;
+	}
+
+	nav {
+		//flex: 0 0 50rem;
+		flex: 1;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li { display: inline-block; }
+}

@@ -1,0 +1,122 @@
+html, body  { height: 100%; margin: 0; }
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	height: auto;
+}
+
+.content {
+//	background-color: blue;
+	flex: 1;
+//	max-width: 75rem;
+//	width: 90%;
+	align-self: center;
+}
+
+.pre-header {
+	background-color: #477fbb;
+	height: 10px;
+	flex: none;
+}
+
+header {
+	position: sticky; top: 0;
+	z-index: 2;
+}
+
+nav {
+	z-index: 2;
+	background-color: rgba(200,200,200, 1);
+	//border-bottom: 1px solid rgb(170,170,170);
+	transition: all 0.3s;
+}
+
+
+.nav-content {
+	width: 95%;
+	margin: 0 auto;
+	flex: 0;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	
+	.nav-left {
+		font-size: 32px;
+		color: #477fbb;
+		padding: 8px 0;
+		text-align: center;
+		transition: all 0.3s;	
+	}
+
+	.nav-right {
+		display: flex;
+		align-items: center;
+		align-self: stretch;
+		text-align: center;
+		padding: 0 20px 0 0;
+	}
+	ul {
+		display: flex;
+		//display: flex;
+		text-align: center;
+		align-items: center;
+		align-self: stretch;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: flex;
+		align-items: center;
+		align-self: stretch;
+		text-align: center;
+		border-bottom: 3px solid transparent;
+
+		a {
+			margin: 0px 8px;
+			padding: 0px 8px;
+			font-size: 16px;
+			font-weight: bold;
+
+			display: flex;
+			align-items: center;
+			align-self: stretch;
+			text-align: center;
+			color: #6A696A;
+			text-decoration: none;
+			height:100%;
+			transition: all 0.3s;
+		}
+		a:hover {
+			color: white;
+			transition: all 0.15s ease-in-out 0s;
+			border-bottom: 3px solid #477fbb;
+			
+		}
+	}
+	button {
+		display: inline;
+		padding: 9px 25px;
+		border-radius: 50px;
+	}
+
+}
+
+
+footer {
+	flex: none;
+	padding: 10px 0 10px 0;
+	background-image: linear-gradient(#2d2d2d, #252525);
+	border-top: 1px solid #1a1a1a;	
+}
+.footer-content {
+	width: 95%;
+	margin: 0 auto;
+	align-self: center;
+	color: #656565;
+	font-size: 16px;
+}

@@ -1,0 +1,330 @@
+// blur example from code from:
+// https://webdesign.tutsplus.com/tutorials/create-a-css-grid-image-gallery-with-blur-effect-and-interaction-media-queries--cms-32287
+
+// Masonry example from
+//https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
+
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.masonry-with-columns {
+  columns: 3 200px;
+  column-gap: 1rem;
+  .grid-element, article {
+    outline: 1px solid black;
+    width: 100px;
+    //background: #EC985A;
+    color: black;
+    margin: 0 1rem 1rem 0;
+
+    //overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: system-ui;
+    font-weight: 900;
+    font-size: 2rem;
+
+	&:hover .title { 
+		//top: 0; 
+	}
+	&:hover img { 
+		filter: brightness(70%) blur(2px);
+	}
+	&:hover .dark-overlay {
+		transform: translateY(-50%); 
+	}
+	&:hover .text-overlay {
+		transform: translateY(0px); 
+	}
+	&:hover .description {
+		opacity: 1;
+	}
+  } 
+
+  img {
+  	width: 100%;
+  	display: block;
+  }
+
+  @for $i from 5 through 11 { 
+    div:nth-child(#{$i}) {
+      $h: (random(400) + 100) + px;
+      height: $h;
+      line-height: $h;
+    }
+  }
+
+	.dark-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 200%;
+		background-image: linear-gradient(transparent,  #000);
+		opacity: 0.6;
+		transition: 0.3s ease-in;
+	}
+
+	.text-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		line-height: 1;
+
+		//margin: 20px; 
+		//outline: 3px solid red;
+		transform: translateY(85%);
+		//transform: translateY(30%);
+		transition: 0.3s ease-in;
+
+		/* typographic styles */
+		.title {
+			margin: 0px 0 0px 10px;
+			color: white;
+			font-size: 0.7em;
+			font-weight: bold;
+			text-decoration: none;
+			text-shadow: 0px 0px 5px #000;
+		}
+		.description {
+			opacity: 0;
+			transition: 0.3s ease-in;
+			margin: 30px 10px 0px 10px;
+			//margin-top: 20px;
+			color: white;
+			font-size: 0.4em;
+			font-weight: normal;
+			text-decoration: none;		
+		}
+
+	}
+}
+
+
+
+.masonry {
+	column-count: 3;  // #cols, min-width
+ 	column-gap: 1rem;
+ 	//margin: 0 auto;
+ 	
+ 	.grid-item {
+ 		background: #EC985A;
+		
+		outline: 1px solid black;
+		color: black;
+		//margin: 0 1rem 1rem 0;
+		display: inline-block;
+		//width: 100%;
+		height: 200px;
+
+		img {
+			width: 100%;
+			//height: auto;
+		}
+    }
+
+
+}
+
+.grid {
+	columns: 3 200px;
+  	column-gap: 1rem;
+  	margin: 0 auto;
+
+	.grid-item {
+	display: inline-block;
+	 width: 150px;
+		//min-width: 100px;
+		//width: 30%;
+		//float: left;
+		//display: inline-block;
+	  //width: 25%;
+	  //height: 60px;
+	  
+	  // width:35%;
+	  //margin:0 auto 20px auto;
+	  //padding:20px;
+
+	  border: 2px solid hsla(0, 0%, 0%, 0.5);
+
+		img {
+			max-width:100%;
+			height: auto;
+		}
+	}
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 1em;
+	margin-bottom: 20px;
+
+	article {
+		position: relative;
+		overflow: hidden;
+		line-height: 0;
+	
+		&:hover .title { 
+			//top: 0; 
+		}
+		&:hover img { 
+			filter: brightness(70%) blur(2px);
+		}
+		&:hover .dark-overlay {
+			transform: translateY(-50%); 
+		}
+		&:hover .text-overlay {
+			transform: translateY(30%); 
+		}
+		&:hover .description {
+			opacity: 1;
+		}
+		
+	}
+
+
+	img {
+	  width: 100%;
+	  height: auto;
+	  //transform: scale(1.05);
+	  transition: 0.3s ease-in;
+
+	//background-image: linear-gradient(transparent, #000);
+	//background-image: linear-gradient(#fff, #000);
+    //opacity: 0.5;
+
+	}
+
+	.dark-overlay {
+		//z-index: 2;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 200%;
+		background-image: linear-gradient(transparent,  #000);
+		opacity: 0.6;
+		transition: 0.3s ease-in;
+		//transform: translateY(50%); 
+	}
+
+	.text-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		line-height: 1;
+
+		//margin: 20px; 
+		//outline: 3px solid red;
+		transform: translateY(85%);
+		//transform: translateY(30%);
+		transition: 0.3s ease-in;
+
+		/* typographic styles */
+		.title {
+			margin: 0px 0 0px 10px;
+			color: white;
+			font-size: 1.5em;
+			font-weight: bold;
+			text-decoration: none;
+			text-shadow: 0px 0px 5px #000;
+		}
+		.description {
+			opacity: 0;
+			transition: 0.3s ease-in;
+			margin: 30px 10px 0px 10px;
+			//margin-top: 20px;
+			color: white;
+			font-size: 1em;
+			font-weight: normal;
+			text-decoration: none;		
+		}
+
+	}
+
+//	image {
+//	line-height: 0;
+//	}
+}
+
+.grid-container-old {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	//grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+	grid-gap: 1em;
+	margin-bottom: 20px;
+
+	img {
+	  width: 100%;
+	  height: auto;
+	}
+
+	.location-listing {
+	  position: relative;
+	  overflow: hidden;
+	}
+	 
+	.location-title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(90,0,10,0.4);
+
+		/* typographic styles */
+		color: white;
+		font-size: 1.5em;
+		font-weight: bold;
+		text-decoration: none;
+
+		/* position the text centrally*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		/* hide the title by default */
+		opacity: 0;
+		transition: opacity .5s;
+		z-index: 1;
+	}
+	
+	.location-listing:hover .location-title {
+	  opacity: 1;
+	}
+
+	.location-image img {
+	  filter: blur(0px);
+	  transition: filter 0.3s ease-in;
+	  //transform: scale(1.1);
+	}
+	 
+	.location-listing:hover .location-image img {
+	  filter: blur(2px);
+	}
+
+	.location-image {
+	  line-height: 0;
+	}
+
+	/* for touch screen devices */
+	@media (hover: none) { 
+		.location-title {
+			opacity: 1;
+		}
+		.location-image img {
+			filter: blur(2px);
+		}
+	}
+}
+
