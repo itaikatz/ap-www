@@ -11,7 +11,7 @@
 #banner-image {
 	z-index: 1;
 	
-	background-image: url("{{site.baseurl}}/assets/images/robot_bg3_gray_8bit.png");
+	background-image: url("{{site.baseurl}}/assets/images/robot_bg3_gray_8bit.jpg");
 	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
 	background-repeat:no-repeat;
 	background-size:contain;
@@ -97,7 +97,7 @@ display: inline-block;
 	a.button {
 		font-size: 0.5em;
 		display: block;
-		width: 40%;
+		width: 50%;
 		margin-top: 10px;
 	}
 }

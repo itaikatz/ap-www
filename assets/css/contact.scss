@@ -1,0 +1,102 @@
+---
+---
+
+.banner-image {
+	display: block;
+	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
+	width: 100%;
+	height: 200px;
+}
+
+.banner {
+	background-image: url("{{site.baseurl}}/assets/images/johnny5_8bit.jpg");
+	background-size: cover;
+	background-position: 63% 0;
+	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
+	width: 100%;
+	height: 25vw;
+	.banner-text {
+		padding-top: 60px;
+	}
+	.icon {
+		width: 40px;
+	}
+}
+
+.content {
+	width: 80%;
+	margin: 0 auto;
+}
+.contact {
+	//columns: 2 200px;
+	//column-rule: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.contact-left {
+	flex: 1 1 200px;
+	break-inside: avoid;
+	text-align: center;
+
+	.icon {
+		width: 40px;
+	}
+}
+
+.contact-right {
+	flex: 1 1 200px;
+	break-inside: avoid;
+
+	background-color: rgba(31,65,149,.2);
+	border-radius: 10px;
+	padding: 20px;
+	input,textarea {
+		display: block;
+		border: 1px solid #ccc;
+		&.invalid {
+			border: 2px solid red;
+		}
+	    border-radius: 10px;
+	    box-sizing: border-box;
+	    padding: .5rem;
+	    height: 2.4rem;
+	    width: 100%;
+	    margin-top: 5px;
+	    margin-bottom: 10px;	    
+	}
+	input[type=submit] {
+		width: 25%;
+		margin: 0 auto;
+		margin-top: 20px;
+		border-radius: 10px;
+		border: 2px outset rgb(118, 118, 118);
+		outline: 0;
+		&:active {
+			border: 2px inset rgb(118, 118, 118);
+			transform: translateY(3px);
+		}
+	}
+
+	input[type=text]:focus, textarea:focus {
+		outline: 0;
+		border: 1px solid #8a8a8a;
+		box-shadow: 0 0 5px rgba(31,65,149,1);
+		transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+		&.invalid {
+			border: 2px solid red;
+		}
+    }
+	textarea {
+		outline: 0;
+		height: 4.8rem;
+		resize: vertical;
+	}
+
+	.required {
+		color: red;
+	}
+}
+
