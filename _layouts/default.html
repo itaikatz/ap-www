@@ -11,15 +11,27 @@
 		<link rel="stylesheet" href="{{page.css}}">
     {% endif %}
 
+
+	{% if page.js.first %}  <!-- page.js is an array -->
+		{% for js in page.js %}
+			<script src="{{js}}"></script>
+		{% endfor %}
+	{% else %}  <!-- page.js is a string -->
+		<script src="{{page.js}}"></script>
+	{% endif %}
+
+<!--
 	{% if page.js %}
 		<script src="{{page.js}}"></script>
     {% endif %}
+-->
   </head>
   <body>
 
 	<div class="header-wrapper {% if page.transparent_nav==true %} transparent {% endif%}">
 	<header>
 	  <a href="index.html" class="logo">
+	  		<!-- <img src="{{site.baseurl}}/assets/images/ap_logo.png"> -->
 	      <span id="Applied">Applied</span><span id="Photons">Photons</span>
 	  </a>
 

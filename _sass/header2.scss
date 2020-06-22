@@ -161,6 +161,9 @@ header {
 	}
 }
 
+.header-wrapper img {
+	height: 60px;
+}
 .header-wrapper.transparent:not(.shrink) { // Override if transparent (e.g. for hero banner)
 	background-color: transparent;
 	backdrop-filter: none;

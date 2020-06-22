@@ -1,18 +1,22 @@
 window.addEventListener('load', function() {
+
+/*
     var articles = document.querySelectorAll("article");
+  //var articles = document.querySelectorAll(".grid-item");
     articles.forEach(function(a) {
     	console.log(a);
-    	title = a.querySelector(".title2")
+    	card = a.querySelector(".card")
+    	title = a.querySelector(".title")
+    	description = a.querySelector(".description")
     	if (title) {
-    		scrim = a.querySelector(".scrim-gradient")
-    		var aHeight = a.clientHeight;
-    		var titleHeight = title.clientHeight;
-    		console.log(titleHeight)
-    		console.log(titleHeight/aHeight)
-    		pct = (100*titleHeight/aHeight)+'%'
-    		console.log(pct)
-    		scrim.style.background = "linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.3) "+ pct +", rgba(0,0,0,0))"
-
+    		console.log('article height: ' + a.clientHeight);
+    		//console.log('card height: ' + card.clientHeight);
+    		console.log('title height: ' + title.clientHeight);
+    		//card.style.bottom = "-" + description.clientHeight + "px";
+    		card.style.transform = "translateY(-100%)";
     	}
     })
+*/
+
+//transform: translateY(-100%); 
 })

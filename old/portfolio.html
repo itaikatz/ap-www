@@ -1,0 +1,137 @@
+---
+layout: default
+title: Portfolio
+css: assets/css/portfolio.css
+js: 
+- https://code.jquery.com/jquery-3.5.1.slim.min.js
+- https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js
+- assets/js/portfolio.js
+
+CategoryA:
+- title: Hyperspectral tumor segmentation
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  img: /assets/images/microscope_small.jpg
+  alt: hyperspectral imaging
+
+- title: Autonomous surgical robotics
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec.
+  img: /assets/images/star_robot.jpg
+  alt: STAR robot
+
+- title: Laser speckle contrast imaging
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec.
+  img: /assets/images/laser_speckle_sharp.png
+  alt: laser speckle contrast imaging
+
+CategoryB:
+- title: Polarimetric imaging
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec.
+  img: /assets/images/polarimetric.png
+  alt: polarimetric imaging
+
+- title: Depth-from-defocus 3D imaging
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec.
+  img: /assets/images/3d_hardware.jpg
+  alt: 3D imaging
+
+- title: Synethetic rendered ML datasets
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec.
+  img: /assets/images/ray_traced.png
+  alt: Synthetic datasets
+---
+<br/><br/>
+<div class="content">
+
+	<div class="grid">
+		{% for article in page.CategoryA %}
+			<div class="grid-item grid-sizer">
+				 <a href="#">
+					<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}">
+					<div class="card">
+						<div class="card-title">{{ article.title }}</div>
+						<div class="card-subtitle">{{ article.description }}</div>
+					</div>
+				 	<!-- <div class="scrim-gradient"></div> -->
+				 	<!-- <div class="title">{{ article.title }}</div> -->
+				 	<!-- <div class="description">{{ article.description }}</div> -->
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+
+<!--
+		{% for article in page.CategoryA %}
+		<div class="grid-item grid-sizer">
+			<div class="scrim-gradient"></div>
+			<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}"> 
+			<div class="title">{{ article.title }}</div>
+		</div>
+		{% endfor %}
+		{% for article in page.CategoryA %}
+		<div class="grid-item grid-sizer">
+			<div class="scrim-gradient"></div>
+			<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}"> 
+			<div class="title">{{ article.title }}</div>
+		</div>
+		{% endfor %}
+	-->
+
+
+<br/><br/>
+
+<!--
+<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 265 }'>
+	{% for article in page.CategoryA %}
+	<div class="grid-item">
+			some text here
+			 <img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}"> 
+	</div>
+	{% endfor %}
+</div>
+-->
+<!--
+<div class="content">
+	<div class="masonry-with-columns">
+		{% for article in page.CategoryA %}
+			<article>
+				 <a href="#">
+				 	<div class="scrim-gradient"></div>
+					<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}">
+				 	<div class="title2">{{ article.title }}</div>
+				 	<div class="description2">{{ article.description }}</div>
+				</a>
+			</article>
+		{% endfor %}
+	</div>	
+</div>
+-->
+<div class="content">
+	<div class="heading">Portfolio</div>
+	<div class="subheading">Category A</div>
+	<div class="masonry-with-columns">
+		{% for article in page.CategoryA %}
+			<article>
+				 <a href="#">
+				 	<div class="scrim-gradient"></div>
+					<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}">
+				 	<div class="title2">{{ article.title }}</div>
+				 	<div class="description2">{{ article.description }}</div>
+				</a>
+			</article>
+		{% endfor %}
+	</div>
+
+	<div class="subheading">Category B</div>
+	<div class="masonry-with-columns">
+		{% for article in page.CategoryB %}
+			<article>
+				 <a href="#">
+				 	<div class="scrim-gradient"></div>
+					<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}">
+				 	<div class="title2">{{ article.title }}</div>
+				 	<div class="description2">{{ article.description }}</div>
+				</a>
+			</article>
+		{% endfor %}
+	</div>
+</div>
