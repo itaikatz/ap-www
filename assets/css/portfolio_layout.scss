@@ -1,0 +1,52 @@
+---
+---
+.page-content {
+	max-width: 800px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+
+	font-size: 1rem;
+	line-height: 1.5;
+	//font-family: 'Roboto';
+    font-weight: 400;
+
+	@media only screen and (max-width: 480px) {
+		width: 80%;
+		text-align: justify;
+	}
+}
+
+figure {
+	margin: 0;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	figcaption {
+		color: #666;
+		font-size: .85rem;
+		padding-bottom: 20px;
+	}
+}
+
+blockquote {
+	border-left: .25em solid #df9100;
+	margin: 1.5em 0px;
+	padding: 0.5em 10px;
+
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: left;
+
+    p {
+		margin-top: 0;
+		margin-bottom: 1rem;
+    }
+    p:last-child {
+    	font-size: 1rem;
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    }
+ }

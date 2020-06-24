@@ -4,11 +4,12 @@ title: Portfolio
 css: assets/css/portfolio.css
 
 CategoryA:
-- title: Hyperspectral tumor segmentation
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec. fjdaskf;j klf asdjfl kajfakld fjaslk  fjdakl fjaslkf ajsfkl ajsfl jslkf asjlkf 
+- title: Hyperspectral surgical microscope
+  description: When surgeons remove a brain tumor, finding the boundary between diseased and healthy brain tissue may be difficult with the naked eye. In this project we equip a surgical microscope with a hyperspectral camera to precisely map a tumor's shape and give surgeons a window to an otherwise invisible target.
+  link: /portfolio/hyperspectral/hyperspectral.html
   img: /assets/images/microscope_crop_darken.jpg
   alt: hyperspectral imaging
-
+  
 - title: Autonomous surgical robotics
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra et ipsum nec lacinia. Cras sodales pellentesque diam, at egestas est efficitur nec.
   img: /assets/images/star_robot.jpg
@@ -44,12 +45,13 @@ CategoryA:
 				 	<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}">
 					<!-- <img src="{{site.baseurl}}/assets/images/lena.png" alt="{{ article.alt }}"> -->
 					<div class="card">
-						<div class="title">{{ article.title }}</div>
+						<div class="title">{{site.baseurl}}{{ article.title }}</div>
 						<div class="description">{{ article.description }}</div>
-				 		<div class="button"><a href="#">Learn more</a></div>
+						{% if article.link %}
+					 		<div class="button"><a href={{ article.link }}>Learn more</a></div>
+					 	{% endif %}
 					</div>
 			</article>
 		{% endfor %}
 	</div>
 </div>
-
