@@ -5,6 +5,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     
     <title>{{ page.title }}</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
 
@@ -14,6 +17,10 @@
 
 	{% if page.css %}
 		<link rel="stylesheet" href="{{page.css}}">
+    {% endif %}
+
+	{% if page.layout=='post' %}
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     {% endif %}
 
     {% if page.js %}
@@ -41,7 +48,7 @@
 	    <ul class="navigation" role="navigation">
 	      <li><a href="{{site.baseurl}}/about.html">About</a></li>
 	      <li><a href="{{site.baseurl}}/portfolio.html">Portfolio</a></li>
-	      <li><a href="#">Blog</a></li>
+	      <li><a href="{{site.baseurl}}/blog.html">Blog</a></li>
 	      <li><a href="{{site.baseurl}}/contact.html" id="contact-button">Contact</a></li>
 	    </ul>
 
@@ -63,7 +70,7 @@
 
 	<footer>
 		<div class="footer-content">
-		Copyright © 2020 - Applied Photons LLC
+		Copyright © 2022 - Applied Photons LLC
 		</div>
 	</footer>
 

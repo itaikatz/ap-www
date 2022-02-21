@@ -1,0 +1,37 @@
+---
+---
+
+.content {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.posts {
+	// display: flex;
+
+	columns: 3 200px;
+    column-gap: 2rem;
+    column-fill: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+}
+
+.post {
+	// display: inline-block;
+    // line-height: 0;
+    margin-bottom: 2rem;
+    /*
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0 , 0.15);
+    border-radius: 50px;
+*/
+	// width: 33%;
+
+	img {
+		// object-fit: fill;
+		border-radius: 10px 10px 10px 10px;
+		width: 100%;
+		height: auto;
+	}
+}

@@ -1,0 +1,32 @@
+---
+layout: default
+css: /assets/css/post.css
+---
+
+{% if page.cover %}
+	<!-- <div class='hero'></div> -->
+	<img class='hero' src="{{page.cover}}"/>
+{% endif %}
+
+<div class='blog-content'>
+
+<h1 class='title'>
+	{% if page.long_title %}
+		{{page.long_title}}
+	{% else %}
+		{{page.title}}
+	{% endif %}
+</h1>
+
+
+{% if page.quote %}
+<blockquote>
+	<div class='quote'>“{{page.quote}}”</div>
+	{% if page.quote_author %}
+		<div class='quote-author'>—&nbsp;{{page.quote_author}}</div>
+	{% endif %}
+</blockquote>
+{% endif %}
+
+{{content}}
+</div>
