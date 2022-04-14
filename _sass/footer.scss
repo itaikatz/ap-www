@@ -1,3 +1,35 @@
+/*
+footer {
+	display: flex;
+	justify-content: space-between;
+	background-color: #2d2d2d; //green
+	color: white;
+	padding: 60px;
+	border-top: 1px solid black;
+
+	> div {
+		align-self: center;
+	}
+
+}
+
+
+.footer-menu {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	flex-basis: 50%;
+
+	> div {
+		flex-basis: 50%;
+		align-self: center;
+		justify-content: center;
+		display: flex;
+		padding: 5px 0;
+	}
+}
+*/
+
 footer {
 	z-index: 999;
 	flex: none;

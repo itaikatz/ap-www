@@ -1,0 +1,21 @@
+<section class='content-section {% if include.fill-color %} fill-color {% endif %}' id='{{include.id}}'>
+	{% if include.text-on-left %}
+	<div class='text-on-left'>
+	{% else %}
+	<div class='text-on-right'>
+	{% endif %}
+		<div class='text'>
+			{% if include.preheading %}
+			<div class='preheading'>{{include.preheading | upcase}}</div>
+			{% endif %}
+
+			<h2>{{include.heading}}</h2>
+			<div>{{include.text}}</div>
+			
+			{% if include.button-text %}
+			<a href="{{site.baseurl}}{{include.button-link}}" class="button {% if include.fill-color %} fill-color {% endif %}'">{{include.button-text | upcase}}</a>
+			{% endif %}
+		</div>
+	</div>
+	<img src="{{site.baseurl}}{{include.imgPath}}"/>
+</section>
