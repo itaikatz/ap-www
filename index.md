@@ -3,7 +3,7 @@ layout: default
 title: index
 css: assets/css/index.css
 transparent_nav: true
-og_image: assets/images/ap_logo.png
+og_image: assets/images/ap_logo_linkedin.png
 og_title: Applied Photons, LLC
 og_url: www.appliedphotons.com
 og_description: Applied Photons is a research and consulting firm dedicated to advancing machine learning, AI, and computer vision to power the next generation of products.
