@@ -9,31 +9,58 @@ CategoryA:
   link: /portfolio/hyperspectral/hyperspectral.html
   img: /assets/images/microscope_crop_darken.jpg
   alt: hyperspectral imaging
-  
-- title: Autonomous surgical robotics
-  description: We developed the first autonomous robot for performing surgical anastomoses. By combining a commercially available maniupulator and camera system with custom AI software and end-effector tools, we successfully demonstrated its operation in a pre-clinical validaton study. 
-  img: /assets/images/star_robot.jpg
-  alt: STAR robot
+  industry: [Medical, Optics]
+  tools: [Computer Vision, ML]
 
 - title: Laser speckle contrast imaging
   description: A common question during surgery is determining the perfusion of blood through tissue. We demonstrated how perfusion can be measured by illuminating tissue with an infrared laser, and observing the resulting backscatter from red blood cells.
   img: /assets/images/laser_speckle_sharp.png
   alt: laser speckle contrast imaging
+  industry: [Medical, Optics]
+  tools: [Computer Vision, ML]
+
+- title: Image-based Terrain Navigation
+  description: In GPS-denied environments, a downward terrain-facing camera can be used to localize an aircraft's position. We demonstrated a particle filter for terrain navigation based on a synthetically generated dataset.
+  img: /assets/images/terrain.png
+  alt: terrain navigation
+  industry: [Aerospace, Defense]
+  tools: [Computer Vision, 3D, Blender]
+
+- title: AHEAD
+  description: Applied Photons was a primary developer for America’s HIV Epidemic Analysis Dashboard (AHEAD), a data visualization tool that displays relevant data on the 6 HIV indicators provided by the Centers for Disease Control and Prevention.
+  link: https://publichealth.jmir.org/2022/2/e33522/
+  img: /assets/images/ahead.png
+  alt: AHEAD
+  industry: [Policy]
+  tools: [Data Visualization, D3js]
 
 - title: Polarimetric imaging
   description: 
-  img: /assets/images/polarimetric.png
+  img: /assets/images/polarimetric3.png
   alt: polarimetric imaging
+  industry: [Medical, Optics]
+  tools: [Computer Vision, ML]
+
+- title: Autonomous surgical robotics
+  description: We developed the first autonomous robot for performing surgical anastomoses. By combining a commercially available maniupulator and camera system with custom AI software and end-effector tools, we successfully demonstrated its operation in a pre-clinical validaton study. 
+  img: /assets/images/star_robot.jpg
+  alt: STAR robot
+  industry: [Medical, Robotics]
+  tools: [ROS, Computer Vision]
 
 - title: Depth-from-defocus 3D imaging
   description: Most 3D cameras require two or more viewing angles, which makes them impractical for laparoscopic surgery. We developed a novel single-axis 3D camera based on fast, electronically-tunable liquid lens.
   img: /assets/images/3d_hardware.jpg
   alt: 3D imaging
+  industry: [Medical, Optics]
+  tools: [Computer Vision, ML]
 
 - title: Synethetic rendered ML datasets
   description: With the availability of high quality rendering software such as Blender, it has recently become possible to generate photorealistic images on commodity computers. These tools can rapidly create ML training datasets that would otherwise be impractical to collect in the field.
   img: /assets/images/ray_traced.png
   alt: Synthetic datasets
+  industry: [General]
+  tools: [Computer Vision, ML]
 ---
 
 <div class="content">
@@ -43,7 +70,27 @@ CategoryA:
 			<article>
 				 	<!-- <div class="scrim-gradient"></div> -->
 				 	<img src="{{site.baseurl}}{{ article.img }}" alt="{{ article.alt }}">
-					<!-- <img src="{{site.baseurl}}/assets/images/lena.png" alt="{{ article.alt }}"> -->
+
+          <div class='tag-container'>
+            {% if article.industry %} 
+              <div class='tag-stack industry'>
+                <span class='tag-heading'>Industry</span>
+                {% for industry in article.industry %}
+                  <span class={{industry | downcase | replace: ' ','-' }}>{{industry}}</span>
+                {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if article.tools %} 
+              <div class='tag-stack tools'>
+                <span class='tag-heading'>Tools</span>
+                {% for tool in article.tools %}
+                  <span class={{tool | downcase | replace: ' ','-' }}>{{tool}}</span>
+                {% endfor %}
+                </div>
+            {% endif %}
+          </div>
+
 					<div class="card">
 						<div class="title">{{site.baseurl}}{{ article.title }}</div>
 						<div class="description">{{ article.description }}</div>

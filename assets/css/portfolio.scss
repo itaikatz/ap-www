@@ -27,6 +27,7 @@ article {
 	margin-bottom: 2rem;
 	box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
 	border-radius: 50px;
+	position: relative;
 }
 
 .card {
@@ -79,6 +80,96 @@ img {
 	display: block;
 
 }
+
+.tag-container {
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+$colors: (#444, #febcc8, #ffffd8, #eaebff, #e0fefe, #d3eeff);
+
+.tag-stack {
+	padding: 0px 0 5px 10px;
+	line-height: 1;
+	color: black;
+	font-size: 0; // Needed to remove grap between elements
+
+	span {
+		user-select: none;
+		font-size: 0.75rem;
+		display: inline-block;
+		// padding: 5px 10px 5px 10px;
+		padding: 7px;
+		border-left: 1px solid #444;
+		border-top: 1px solid #444;
+		border-bottom: 1px solid #444;
+	}
+
+	> .tag-heading {
+		border-radius: 10px 0 0 10px;
+		color: white;
+	}
+
+	> span:not(:first-child) {
+		// border-left: 1px solid white;
+	}
+
+	> span:last-child {
+		border-radius: 0 10px 10px 0;
+		border-right: 1px solid #444;
+	}
+
+	// Colors
+	> span { // default color
+		background-color: nth($colors,2);
+	}
+	
+	> span.tag-heading { // header color
+		// background-color: #444;
+		background-color: nth($colors,1);
+	}
+
+	> span.medical {
+		background-color: nth($colors,3);
+	}
+	> span.optics {
+		background-color: nth($colors,4);
+	}
+	> span.computer-vision {
+		background-color: nth($colors,5);
+	}
+	> span.ml {
+		background-color: nth($colors,6);
+	}
+	> span.ros {
+		background-color: nth($colors,6);
+	}
+	> span.policy {
+		background-color: nth($colors,2);
+	}
+	> span.d3js {
+		background-color: nth($colors,3);
+	}
+	> span.data-visualization {
+		background-color: nth($colors,4);
+	}
+	> span.aerospace {
+		background-color: nth($colors,6);
+	}
+	> span.defense {
+		background-color: nth($colors,5);
+	}
+	> span.blender {
+		background-color: nth($colors,3);
+	}
+
+}
+
+.tools .tag-heading {
+	margin-left: 17.5px;
+}
+
+
 /*
 
 .card {
