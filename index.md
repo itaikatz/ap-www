@@ -61,7 +61,7 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 </div>
 
 
-
+<!--
 {% include section.html 
 	id='hyperspectral'
 	text-on-left=true
@@ -73,7 +73,7 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 	button-text='see case study'
 	button-link='/portfolio/hyperspectral/hyperspectral.html'
 %}
-
+-->
 
 <div class='sub-header'>
 	<div class='head1'>Work with Applied Photons</div>
