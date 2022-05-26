@@ -12,8 +12,18 @@ section.content-section {
 	}
 
 	> *:nth-of-type(1) {
-		align-self:center;
 	}
+	> *:nth-of-type(1).text-on-left {
+		align-self:center;
+		justify-self: end;
+		padding-right: 4vw;
+	}
+	> *:nth-of-type(1).text-on-right {
+		align-self:center;
+		justify-self: start;
+		padding-left: 4vw;
+	}
+
 	> *:nth-of-type(2) {
 	}
 
@@ -24,8 +34,6 @@ section.content-section {
 	}
 
 	.text {
-		padding: 30px 30px 30px 120px;
-		// padding-left: 120px;
 		max-width: 360px;
 
 		@media only screen and (max-width: 480px) {
@@ -34,7 +42,7 @@ section.content-section {
 		}
 	}
 	.text h2 {
-		font-size: 40px;
+
 		line-height: 1.2;
 		margin-bottom: 30px;
 		margin-top: 0;
@@ -43,13 +51,18 @@ section.content-section {
 		// font-family: 'Roboto', sans-serif;
 		font-weight: 400;
 
+		// font-size: 40px;
+		font-size: 2vw;
 		@media only screen and (max-width: 480px) { 
 			font-size: 45px;
 		}
 	}
 
 	.text div {
-		font-size: 17px;
+		font-size: 1.3vw;
+		@media only screen and (max-width: 480px) {
+			font-size: 17px;
+		}
 	}
 
 	.text .button.fill-color {
