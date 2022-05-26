@@ -13,7 +13,12 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 <div id="banner-image"></div>
 <div id="banner-text">
 	<div id="heading-a">Cutting edge science for<br/> challenging problems</div>
+<!-- 	
 	<div id="heading-b">Applied Photons is dedicated to novel engineering solutions across the entire development pipeline.</div>
+ -->	
+	<div id="heading-b">Applied Photons helps top companies design and deploy custom end-to-end <span>machine learning</span> and <span>computer vision</span> products.</div>
+
+
 	<a href="contact.html" class="button" id="learn">Contact us</a>
 	<a href="portfolio.html" class="button" id="portfolio">See our portfolio</a>
 </div>
@@ -57,6 +62,7 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 		<span>React</span>
 		<span>ROS</span>
 		<span>Blender</span>
+		<span>ThreeJS</span>
 	</div>
 </div>
 

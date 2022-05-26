@@ -1,6 +1,73 @@
 ---
 ---
 
+.banner {
+	z-index: 1;
+	flex: 0;
+	position: relative;
+
+	width: 100%;
+	// padding-bottom: 34%; // ~height/width
+	padding-bottom: 70vh; // ~height/width
+	// height: 0.3vh;
+	
+	@media only screen and (max-width: 480px) {
+		padding-bottom: 35vh;
+	}
+}
+#banner-image {
+	z-index: 1;
+	
+	background-image: url("{{site.baseurl}}/assets/images/washington_dc.jpg");
+	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
+	background-repeat:no-repeat;
+	background-size:cover;
+	height: 66vh;
+	// padding-bottom: 0.3vh;
+	// background-size: cover;
+	width: 100%;
+	// padding-bottom: 35%; // ~height/width
+	position: absolute; 
+
+	@media only screen and (max-width: 480px) {
+		height: 30vh;
+		// padding-bottom: 30vh; // ~height/width
+		background-size:cover;
+		background-position-x: -20px;
+	}
+}
+
+#banner-text {
+	width: 40%;
+	z-index: 1;
+	position: absolute;
+	//transform: translate(10%, 15%);
+	top: 25%;
+	left: 5%;
+
+	#heading-a {
+		color: #d5e9f6;
+		z-index: 1;
+		font-size: 3vw;
+		font-weight: bold;		
+		@media only screen and (max-width: 480px) {
+			font-size: 6vw;
+		}
+	}
+	#heading-b {
+		color: #d5e9f6;
+		z-index: 1;
+		font-size: 1.5vw;
+		font-weight: lighter;
+		margin-top: 10px;
+		@media only screen and (max-width: 480px) {
+			font-size: 3vw;
+		}
+
+
+	}
+}
+
 .content {
 	width: 80%;
 	margin: 0 auto;
