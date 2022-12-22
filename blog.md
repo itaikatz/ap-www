@@ -8,7 +8,6 @@ css: assets/css/blog.css
 	<div class="heading">Blog</div>
 
 <div class="posts">
-
 	{% for post in site.posts %}
 		<div class="post">
 			<a href="{{ post.url }}">
