@@ -9,12 +9,14 @@ css: assets/css/blog.css
 
 <div class="posts">
 	{% for post in site.posts %}
-		<div class="post">
-			<a href="{{ post.url }}">
-			<img class='thumbnail' src="{{post.thumbnail}}"/>
-			</a>
-			<!-- <h2><a href="{{ post.url }}">{{ post.long_title }}</a></h2> -->
-		</div>
+		{% unless post.publish == false %}
+			<div class="post">
+				<a href="{{ post.url }}">
+				<img class='thumbnail' src="{{post.thumbnail}}"/>
+				</a>
+				<!-- <h2><a href="{{ post.url }}">{{ post.long_title }}</a></h2> -->
+			</div>
+		{% endunless %}
 	{% endfor %}
 </div>
 
