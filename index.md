@@ -9,7 +9,7 @@ og_url: www.appliedphotons.com
 og_description: Applied Photons is a research and consulting firm dedicated to advancing machine learning, AI, and computer vision to power the next generation of products.
 ---
 
-<div class="banner">
+<div class="banner"> 
 <div id="banner-image"></div>
 <div id="banner-text">
 	<div id="heading-a">Cutting edge science for<br/> challenging problems</div>
