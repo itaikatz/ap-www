@@ -13,9 +13,9 @@ transparent_nav: false
 <div class="content">
 <div class="heading">Bethesda Data Science Meetup</div>
 
-<a href="https://www.meetup.com/bethesda-data-science-networking-meetup/">Click here for the Bethesda Data Science Meetup</a>
+<a href="https://www.meetup.com/bethesda-data-science-networking-meetup/events/294952745/">Click here for the Bethesda Data Science Meetup</a>
 <p>
-<a href="https://www.meetup.com/bethesda-data-science-networking-meetup/">
+<a href="https://www.meetup.com/bethesda-data-science-networking-meetup/events/294952745/">
   <img style="width: 50%" src="{{site.baseurl}}/assets/images/data_science_cover3.png">
 </a>
 
