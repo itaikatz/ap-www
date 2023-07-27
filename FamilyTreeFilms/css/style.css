@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'GothicA1';
+    src: url('../assets/fonts/GothicA1-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'GothicA1';
+    src: url('../assets/fonts/GothicA1-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+/* Set background color to black */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;    
+}
+
+header, footer {
+    /* align contents in center  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+    
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally centers contents if there is extra space */
+    align-items: center; /* Vertically centers contents */
+}
+
+.row-contents {
+    max-width: 1140px;    
+}
+
+.row-alternate-color {
+    background-color: #141414;
+    /* background-color: #727272; */
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Aligns text to the center */
+    flex: 1;
+    padding: 1em;
+}
+
+.row p {
+    text-align: center;
+    font-family: 'GothicA1', sans-serif;
+    font-size: 27px;
+    font-weight: 100;
+}
+@media screen and (max-width: 768px) {
+    .row p {
+        margin: 10px 20px 30px 20px;
+        font-size: 20px;
+    }
+}
+
+
+.row h3 {
+    font-family: 'GothicA1', sans-serif;
+    font-size: 55px;
+    font-weight: 400;
+    color: #CEBB8E;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .row h3 {
+        margin: 0 20px;
+        font-size: 30px;
+    }
+}
+
+
+/* For features section */
+.features > p {
+    font-family: 'GothicA1', sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+    margin: 20px 0 20px 0;
+}
+@media screen and (max-width: 768px) {
+    .features > p {
+        margin: 0 20px;
+        font-size: 25px;
+    }
+}
+
+.features p:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #CEBB8E; /* adjust color as needed */
+    margin: 10px auto; /* adjust as needed */
+    width: 600px;    
+}
+@media screen and (max-width: 768px) {
+    .features > p:after {
+        /* margin: 0 20px; */
+        width: 100%;
+    }
+}
+
+.features p:last-child:after {
+    display: none;
+}
+
+/* For carousel row */
+.carousel.row-contents {
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .carousel.row-contents {
+        flex-direction: column;
+    }
+}
+.carousel .col {
+    flex: 1;
+    padding: 30px 10px;
+}
+@media screen and (max-width: 768px) {
+    .carousel .col {
+        padding: 20px;
+    }
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;    
+}
+
+/* For contact row */
+.contact.row-contents {
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .contact.row-contents {
+        flex-direction: column;
+    }
+}
+.contact p {
+    color: #CEBB8E;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.contact p:hover {
+    color: white;
+}
+
+.contact .col {
+    flex: 1;
+}
+
+.contact .col p:not(:last-child) {
+    border-bottom: 1px dotted #CEBB8E;
+    padding-bottom: 10px;
+}
+
+.contact .icon {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.contact iframe {
+    max-height: 300px;
+    max-width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .col {
+        flex-basis: 100%;
+    }
+}
