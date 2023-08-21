@@ -42,7 +42,13 @@ header img {
 }
 
 .row-contents {
-    max-width: 1140px;    
+    width: 1140px;    
+}
+@media screen and (max-width: 768px) {
+    .row-contents {
+        width: 100%;
+    }
+   
 }
 
 .row-alternate-color {
@@ -64,7 +70,7 @@ header img {
     text-align: center;
     font-family: 'GothicA1', sans-serif;
     font-size: 27px;
-    font-weight: 100;
+    font-weight: 400;
 }
 @media screen and (max-width: 768px) {
     .row p {
@@ -89,73 +95,59 @@ header img {
 }
 
 
-/* For features section */
-.features > p {
-    font-family: 'GothicA1', sans-serif;
-    font-size: 35px;
-    font-weight: 100;
-    margin: 20px 0 20px 0;
-}
-@media screen and (max-width: 768px) {
-    .features > p {
-        margin: 0 20px;
-        font-size: 25px;
+/* Responsive styles */
+@media (max-width: 600px) {
+    .col {
+        flex-basis: 100%;
     }
 }
 
-.features p:after {
-    content: "";
-    display: block;
-    border-bottom: 1px solid #CEBB8E; /* adjust color as needed */
-    margin: 10px auto; /* adjust as needed */
-    width: 600px;    
+
+.swiper {
+    height: 300px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+.swiper-slide {
+    display: inline-block;
+    height: 100%;
+    width: auto !important;
 }
+
+.swiper-slide img {
+    height: 100%;
+    width: auto;
+}  
+
+
 @media screen and (max-width: 768px) {
-    .features > p:after {
-        /* margin: 0 20px; */
+    .swiper {
+        height: 100px;
         width: 100%;
     }
-}
 
-.features p:last-child:after {
-    display: none;
-}
-
-/* For carousel row */
-.carousel.row-contents {
-    display: flex;
-    width: 100%;
-}
-@media screen and (max-width: 768px) {
-    .carousel.row-contents {
-        flex-direction: column;
+    .swiper-slide {
+        display: inline-block;
+        height: 100%;
+        width: auto !important;
     }
-}
-.carousel .col {
-    flex: 1;
-    padding: 30px 10px;
-}
-@media screen and (max-width: 768px) {
-    .carousel .col {
-        padding: 20px;
-    }
+
+    .swiper-slide img {
+        height: 100%;
+        width: auto;
+    }  
 }
 
-.img-responsive {
-    max-width: 100%;
-    height: auto;    
-}
+
 
 /* For contact row */
 .contact.row-contents {
     display: flex;
-    width: 100%;
+    justify-content: space-between; 
+    width: 750px;
 }
-@media screen and (max-width: 768px) {
-    .contact.row-contents {
-        flex-direction: column;
-    }
-}
+
 .contact p {
     color: #CEBB8E;
     text-align: left;
@@ -163,7 +155,29 @@ header img {
     display: flex;
     align-items: center;
     margin: 10px 0;
+    font-size: 30px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .contact.row-contents {
+        flex-direction: column;
+        align-items: center; /* centers the items horizontally when stacked */
+    }
+
+    .contact .left, 
+    .contact .right {
+        width: 100%;  /* makes them occupy the full width */        
+    }
+
+    .contact p {
+        font-size: 20px;
+        justify-content: center;
+    }
+}
+
+
+
 .contact p:hover {
     color: white;
 }
@@ -177,6 +191,19 @@ header img {
     padding-bottom: 10px;
 }
 
+a[href^="mailto:"] {
+    color: #CEBB8E;
+}
+a[href^="mailto:"]:hover {
+    color: white;
+}
+a[href^="tel:"] {
+    color: #CEBB8E;
+}
+a[href^="tel:"]:hover {
+    color: white;
+}
+
 .contact .icon {
     height: 35px;
     margin-right: 10px;
@@ -187,9 +214,51 @@ header img {
     max-width: 100%;
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    .col {
-        flex-basis: 100%;
+/* For contact row */
+.social.row-contents {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+}
+.social .icon {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.film-styles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.film-style {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    flex: 1 0 calc(50% - 10px);  /* Assuming you want a little space between the boxes */
+    margin: 5px;
+    /* No fixed height here, as the box will expand based on content */
+    padding: 10px;  /* Optional: Add some padding for better spacing inside the box */
+    text-align: center;
+    font-size: 27px;
+}
+@media screen and (max-width: 768px) {  /* Adjust the breakpoint as necessary */
+    .film-style {
+        font-size: 20px;
     }
+}
+
+.film-style .heading {
+    color: #CEBB8E;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {  /* Adjust the breakpoint as necessary */
+    .film-style {
+        flex: 1 0 100%;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #CEBB8E;
 }

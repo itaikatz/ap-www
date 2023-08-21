@@ -1,0 +1,101 @@
+
+/* For features section */
+.features > p {
+    font-family: 'GothicA1', sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+    margin: 20px 0 20px 0;
+}
+@media screen and (max-width: 768px) {
+    .features > p {
+        margin: 0 20px;
+        font-size: 25px;
+    }
+}
+
+.features p:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #CEBB8E; /* adjust color as needed */
+    margin: 10px auto; /* adjust as needed */
+    width: 600px;    
+}
+@media screen and (max-width: 768px) {
+    .features > p:after {
+        /* margin: 0 20px; */
+        width: 100%;
+    }
+}
+
+.features p:last-child:after {
+    display: none;
+}
+
+
+/* For carousel row */
+.carousel.row-contents {
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .carousel.row-contents {
+        flex-direction: column;
+    }
+}
+.carousel .col {
+    flex: 1;
+    padding: 30px 10px;
+}
+@media screen and (max-width: 768px) {
+    .carousel .col {
+        padding: 20px;
+    }
+}
+
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;    
+}
+
+/* For contact row */
+.contact.row-contents {
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .contact.row-contents {
+        flex-direction: column;
+    }
+}
+
+.contact p {
+    color: #CEBB8E;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.contact p:hover {
+    color: white;
+}
+
+.contact .col {
+    flex: 1;
+}
+
+.contact .col p:not(:last-child) {
+    border-bottom: 1px dotted #CEBB8E;
+    padding-bottom: 10px;
+}
+
+.contact .icon {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.contact iframe {
+    max-height: 300px;
+    max-width: 100%;
+}
