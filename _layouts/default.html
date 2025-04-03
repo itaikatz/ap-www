@@ -114,17 +114,21 @@
 		</div>
 		<div>COPYRIGHT © 2022</div>
 -->
-
 		<div class="footer-content">
-		Copyright © 2022 - Applied Photons LLC
+			Copyright © <span id="current-year"></span> - Applied Photons LLC
 		</div>
+		<!-- <div class="footer-content">
+		Copyright © 2022 - Applied Photons LLC
+		</div> -->
 	</footer>
 
 
 	<script>
 	  window.addEventListener('load', function() {
-
-      // Set up hamburger menu icon animation
+		// Set up the current year in the footer	
+		document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+		// Set up hamburger menu icon animation
       var menuButton = document.getElementById('menuButton');
       menuButton.addEventListener('click', function (e) {
         menuButton.classList.toggle('is-active');
