@@ -17,7 +17,6 @@
 }
 #banner-image {
 	z-index: 1;
-	
 	background-image: url("{{site.baseurl}}/assets/images/washington_dc.jpg");
 	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
 	background-repeat:no-repeat;

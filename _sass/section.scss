@@ -1,5 +1,12 @@
 section.content-section {
+	position: relative;
 	display: grid;
+	padding-top: 50px;
+	// background-image: url("/assets/images/cubes.png");
+	// background-color: rgb(41, 41, 41);
+	// background-blend-mode: overlay; /* Experiment with different blend modes */
+	
+
 
 	&.fill-color {
 		background-color: #4c6fe7;
@@ -9,7 +16,17 @@ section.content-section {
 	@media (min-width: 481px) {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
+
+		.text-on-left + img {
+			border-radius: 32px 0 0 32px;
+		}
+		.text-on-right + img {
+			border-radius: 0 32px 32px 0;
+		}	
+
 	}
+
+	
 
 	> *:nth-of-type(1) {
 	}
@@ -34,7 +51,7 @@ section.content-section {
 	}
 
 	.text {
-		max-width: 360px;
+		max-width: 500px;
 
 		@media only screen and (max-width: 480px) {
 			padding: 30px;
@@ -50,11 +67,14 @@ section.content-section {
 		font-family: 'Open Sans', sans-serif;
 		// font-family: 'Roboto', sans-serif;
 		font-weight: 400;
-
-		// font-size: 40px;
-		font-size: 2vw;
+		color: #d8ecf8;
+		text-wrap: balance;
+		
+		// font-size: 2vw;
+		font-size: 3rem;
 		@media only screen and (max-width: 480px) { 
-			font-size: 45px;
+			font-size: 25px;
+			text-wrap: balance;
 		}
 	}
 
@@ -63,6 +83,7 @@ section.content-section {
 		@media only screen and (max-width: 480px) {
 			font-size: 17px;
 		}
+		color: #dedede;
 	}
 
 	.text .button.fill-color {

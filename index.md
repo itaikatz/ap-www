@@ -12,29 +12,29 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 <div class="banner"> 
 <div id="banner-image"></div>
 <div id="banner-text">
-	<div id="heading-a">Cutting edge science for<br/> challenging problems</div>
-<!-- 	
-	<div id="heading-b">Applied Photons is dedicated to novel engineering solutions across the entire development pipeline.</div>
- -->	
-	<div id="heading-b">Applied Photons helps top companies design and deploy custom end-to-end <span>machine learning</span> and <span>computer vision</span> products.</div>
-
-
-	<a href="contact.html" class="button" id="learn">Contact us</a>
-	<a href="portfolio.html" class="button" id="portfolio">See our portfolio</a>
+	<div id="heading-a">Research-Powered Computer Vision<br>for Medical Imaging and Beyond</div>	
+	<div id="heading-b">Solve your most complex imaging challenges with technology that puts you years ahead of industry standards.</div>
+	<a href="contact.html" class="button" id="learn">Discuss Your Challenge</a>
+	<a href="portfolio.html" class="button" id="portfolio">Explore Our Solutions</a>
 </div>
-<!-- 
-<div class="heading" id="heading1">Computer vision</div>
-<div class="heading" id="heading2">Machine learning</div>
-<div class="heading" id="heading3">Robotics</div>
- -->
 </div>
 
 {% include section.html 
 	text-on-left=true
+	heading='From Research Papers to Real-World Impact'
+	text='Advanced computer vision innovations often remain confined to academic literature and research labs, unavailable to companies that could benefit from them. 
+	<br><br>
+	Applied Photons bridges this gap by translating theoretical breakthroughs into practical implementations that solve your most challenging imaging problems.'
+	imgPath='/assets/images/toy_camera.jpg'
+%}
+
+
+<!-- {% include section.html 
+	text-on-left=true
 	heading='Research-based solutions'
 	text='We customize state-of-the-art computer vision, machine learning, and Al to power the next generation of products.'
 	imgPath='/assets/images/toy_camera.jpg'
-%}
+%} -->
 
 {% include section.html 
 	text-on-left=false
@@ -83,8 +83,8 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 
 <div class='sub-header'>
 	<div class='head1'>Work with Applied Photons</div>
-	<div class='head2'>Find out how Applied Photons can help you tackle your most challenging data science and machine learning projects.</div>
-	<a href="{{site.baseurl}}/contact.html" class="button" style="background-color: white; color: black">GET IN TOUCH</a>
+	<div class='head2'>Find out how Applied Photons can help you tackle your most challenging computer vision projects.</div>
+	<a href="{{site.baseurl}}/contact.html" class="button" style="background-color: white; color: black">Book a Call</a>
 </div>
 
 <!--  

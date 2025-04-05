@@ -78,9 +78,10 @@ header {
 	}
 	.menu-button {
 		position: absolute;
-		right: 0;
-		top: 0;
-		transform: translateY(15%);
+		right: 8px; /* Add some padding from the edge */
+  		top: 50%; /* Position at middle of the header */
+  		transform: translateY(-50%); /* Center it precisely */
+		
 	}
 
 	.menu-button.is-active .burger-icon {
@@ -110,7 +111,7 @@ header {
 .header-wrapper {
 	position: fixed; top: 0;
 	z-index: 998;
-	transition: all 0.3s;
+	transition: all 0.6s;
 	
 }
 
@@ -122,9 +123,10 @@ header {
 	.logo {
 		z-index: 999;
 		flex: 0;
-		font-size: 32px;
+		// font-size: 32px;
+		font-size: 40px;
 		margin: 8px 0;
-		transition: all 0.3s;		
+		transition: all 0.6s;		
 	}
 
 	.icon {
@@ -135,14 +137,14 @@ header {
 		z-index: 999;
 		flex: 1;
 		align-self: stretch;
-		padding: 8px 0;
+		padding: 12px 0;
 	}
 	ul {
 		margin: 0;
 		padding: 0;
 		height: 100%;
 		text-align: right;
-		transition: all 0.3s;		
+		transition: all 0.6s;		
 	}
 	li {
 		height: 100%;
