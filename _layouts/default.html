@@ -6,154 +6,17 @@
 	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
     <title>{{ page.title }}</title>
+</head>
+<body>
 
-	{% if page.og_image %}
-	<meta name="image" property="og:image" content="{{site.baseurl}}/{{page.og_image}}">
-	{% endif %}
+    <header>        
+    </header>
 
-	{% if page.og_title %}
-	<meta property='og:title' content='{{page.og_title}}'/>
-	{% endif %}
-
-	{% if page.og_description %}
-	<meta property='og:description' content='{{page.og_description}}'/>
-	{% endif %}
-
-	{% if page.og_url %}
-	<meta property='og:url' content='{{page.og_url}}'/>
-
-	{% endif %}
-
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-	<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans|Roboto|Yrsa&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans|Yrsa&display=swap" rel="stylesheet"> -->
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Yrsa&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-	{% if layout.css %}
-		<link rel="stylesheet" href="{{layout.css}}">
-    {% endif %}
-
-	{% if page.css %}
-		<link rel="stylesheet" href="{{page.css}}">
-    {% endif %}
-
-	{% if page.layout=='post' %}
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    {% endif %}
-
-    {% if page.js %}
-		{% if page.js.first %}  <!-- page.js is an array -->
-			{% for js in page.js %}
-				<script src="{{js}}"></script>
-			{% endfor %}
-		{% else %}  <!-- page.js is a string -->
-			<script src="{{page.js}}"></script>
-		{% endif %}
-	{% endif %}
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TL46YWVK9J"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-TL46YWVK9J');
-	</script>
-
-  </head>
-  <body>
-
-	<div class="header-wrapper {% if page.transparent_nav==true %} transparent {% endif%}">
-	<header>
-	  <a href="{{site.baseurl}}/index.html" class="logo">
-	  		<!-- <img src="{{site.baseurl}}/assets/images/ap_logo.png"> -->
-	      <span id="Applied">Applied</span><span id="Photons">Photons</span>
-	  </a>
-
-
-	  <nav>
-	    <ul class="navigation" role="navigation">
-	      <li><a href="{{site.baseurl}}/about.html">About</a></li>
-	      <li><a href="{{site.baseurl}}/portfolio.html">Portfolio</a></li>
-	      <li><a href="{{site.baseurl}}/blog.html">Blog</a></li>
-	      <li><a href="{{site.baseurl}}/contact.html" id="contact-button">Contact</a></li>
-	    </ul>
-
-	  <!-- "Hamburger icon" to toggle the navigation links -->
-	  <a href="#" class="menu-button" id="menuButton">
-	    <span class="burger-icon"></span>
-	  </a>
-
-	  </nav>
-
-	</header>
-	</div>
-
-  	<div class="page-content">
+    <div class="page-content">
     	{{ content }}
 	</div>
 
+    <footer>        
+    </footer>
 
-
-	<footer>
-<!--
-		<div>Applied Photons</div>
-		<div class='footer-menu'>
-			<div>INDUSTRIES</div>
-			<div>EXPERTISE</div>
-			<div>BLOG</div>
-			<div>ABOUT</div>
-		</div>
-		<div>COPYRIGHT © 2022</div>
--->
-		<div class="footer-content">
-			Copyright © <span id="current-year"></span> - Applied Photons LLC
-		</div>
-		<!-- <div class="footer-content">
-		Copyright © 2022 - Applied Photons LLC
-		</div> -->
-	</footer>
-
-
-	<script>
-	  window.addEventListener('load', function() {
-		// Set up the current year in the footer	
-		document.getElementById('current-year').textContent = new Date().getFullYear();
-      
-		// Set up hamburger menu icon animation
-      var menuButton = document.getElementById('menuButton');
-      menuButton.addEventListener('click', function (e) {
-        menuButton.classList.toggle('is-active');
-        e.preventDefault();
-
-        var navMenu = document.getElementsByClassName("navigation")[0];
-        navMenu.classList.toggle('visible');
-      });
-
-      // Set up navbar shrink when scrolling
-      var scrollThresh = 80;
-      var classSelector = document.querySelector(".header-wrapper").classList;
-      function navbar_shrink() {
-        if (document.documentElement.scrollTop > scrollThresh) { 
-          classSelector.add("shrink");
-        } else { 
-          classSelector.remove("shrink"); 
-        }
-      }
-      window.onscroll = navbar_shrink;
-    
-    // Housekeeping items to run on page load
-    navbar_shrink();
-  });
-  	</script>
-
-  </body>
-</html>
+</body>
