@@ -6,6 +6,13 @@ body {
 	background-blend-mode: overlay; /* Experiment with different blend modes */
 }
 
+.page-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
 .banner {
 	z-index: 1;
 	flex: 0;
@@ -277,14 +284,53 @@ display: inline-block;
 .head2 {
 	text-wrap: balance;
 }
-section#hyperspectral {
-	// @media only screen and (max-width: 480px) { 
-	// 	h2 {
-	// 		font-size: 45px;
-	// 	}
-	// }
-// 	img {
-// 			height: 250px;
-// 		// }
-// 	}
+
+
+section.capabilities {
+	font-size: 1.3vw;
+    color: #dedede;	
+	
+	width: 100%; /* Full width on mobile */
+	max-width: 80rem; /* Maximum width on large screens (about 1280px) */
+	
+	//padding: 0 1.5rem; /* Padding for smaller screens */
+	@media (max-width: 481px) {
+		width: 95%;
+	}
+
+	h2 {
+
+		line-height: 1.2;
+		margin-bottom: 30px;
+		margin-top: 0;
+		// font-family: 'Yrsa',serif;
+		font-family: 'Open Sans', sans-serif;
+		// font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+		color: #d8ecf8;
+		text-wrap: balance;
+		text-align: center;
+
+		// font-size: 2vw;
+		font-size: 3rem;
+		@media only screen and (max-width: 480px) { 
+			font-size: 25px;
+			text-wrap: balance;
+		}
+
+		
+	}
+
+	.capabilities-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width */
+		grid-template-rows: repeat(2, 1fr);    /* Creates 2 rows of equal height */
+		gap: 1rem;                            /* Adds spacing between grid items */
+	  }
+	  
+	  .capabilities-grid > div {
+		padding: 1.5rem;
+		border: 1px solid #eaeaea;
+		border-radius: 0.5rem;
+	  }
 }

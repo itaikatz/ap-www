@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog-post
 author: itai
 long_title: 'Things I wish I knew'
 quote: Everybody has a plan until they get punched in the mouth.

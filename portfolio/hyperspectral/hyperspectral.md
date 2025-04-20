@@ -1,12 +1,7 @@
 ---
-layout: portfolio
+layout: post
 title: Hyperspectral Tumor Imaging
 ---
-<!--
-css: assets/css/contact.css
-js: assets/js/contact.js
-transparent_nav: true
--->
 
 {% include image.html url="/portfolio/hyperspectral/banner_test.jpg" alt="hyperspectral camera" %}
 

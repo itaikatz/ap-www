@@ -19,7 +19,7 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 </div>
 </div>
 
-{% include section.html 
+{% include homepage-section.html 
 	text-on-left=true
 	heading='From Research Papers to Real-World Impact'
 	text='Advanced computer vision innovations often remain confined to academic literature and research labs, unavailable to companies that could benefit from them. 
@@ -28,22 +28,72 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 	imgPath='/assets/images/toy_camera.jpg'
 %}
 
+<section class="capabilities">
+	<h2>Our Core Computer Vision Capabilities</h2>
+	<p>Our expertise centers on advanced computer vision technologies, supported by complementary capabilities that deliver end-to-end solutions</p>
 
-<!-- {% include section.html 
-	text-on-left=true
-	heading='Research-based solutions'
-	text='We customize state-of-the-art computer vision, machine learning, and Al to power the next generation of products.'
-	imgPath='/assets/images/toy_camera.jpg'
-%} -->
+	<div class="capabilities-grid">
 
-{% include section.html 
+		<div>
+		Advanced Image Analysis
+		<br><br>
+		Extracting meaningful insights from diverse optical modalities including visible light, infrared, hyperspectral, and polarimetric imaging.
+		</div>
+		<div>
+		Machine Learning Integration
+		<br><br>
+		Enhancing vision systems with custom ML models that automate analysis, identify patterns, and improve accuracy for medical and research applications.
+		</div>
+		<div>
+		Custom Optical Systems
+		<br><br>
+		Designing specialized hardware configurations that exceed off-the-shelf limitations for unique imaging challenges.
+		</div>
+		<div>
+		Real-Time Processing Solutions
+		<br><br>
+		Balancing efficiency with accuracy to enable responsive decision-making in time-sensitive clinical and operational environments. 	
+		</div> 
+		
+
+	</div>
+
+</section>
+<!--
+{% include homepage-section.html 
+	text-on-left=false
+	heading='Our Core Computer Vision Capabilities'
+	text='
+	Our expertise centers on advanced computer vision technologies, supported by complementary capabilities that deliver end-to-end solutions
+	<br><br>
+	Advanced Image Analysis
+	<br><br>
+	Extracting meaningful insights from diverse optical modalities including visible light, infrared, hyperspectral, and polarimetric imaging.
+	<br><br>
+	Machine Learning Integration
+	<br><br>
+	Enhancing vision systems with custom ML models that automate analysis, identify patterns, and improve accuracy for medical and research applications.
+	<br><br>
+	Custom Optical Systems
+	<br><br>
+	Designing specialized hardware configurations that exceed off-the-shelf limitations for unique imaging challenges.
+	<br><br>
+	Real-Time Processing Solutions
+	<br><br>
+	Balancing efficiency with accuracy to enable responsive decision-making in time-sensitive clinical and operational environments. 	
+	'
+	imgPath='/assets/images/synthetic_datasets.png'
+%}
+-->
+
+{% include homepage-section.html 
 	text-on-left=false
 	heading='Guided by expertise'
 	text='Our team of data scientists and engineers accelerate innovation. We bring a diverse set of research and development expertise, scientific rigor, and a deep knowledge of state-of-the-art techniques to design, build, and deploy bespoke solutions.'
 	imgPath='/assets/images/synthetic_datasets.png'
 %}
 
-{% include section.html 
+{% include homepage-section.html 
 	text-on-left=true
 	heading='Shaped by cross-industry experience'
 	text='Applied Photons has worked with organizations of all sizes — from startups to government — and in industries from healthcare to defense, policy, construction, and more.'
@@ -68,7 +118,7 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 
 
 <!--
-{% include section.html 
+{% include homepage-section.html 
 	id='hyperspectral'
 	text-on-left=true
 	fill-color=true
