@@ -1,0 +1,93 @@
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+// Example color variables - replace with your actual brand colors
+$primary-color: #0056b3; // Example blue
+$secondary-color: #6c757d; // Example gray
+$success-color: #28a745;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+
+$text-color: #343a40; // Dark gray for text
+$text-muted: #6c757d;
+$text-light: #f8f9fa; // Light gray for text
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 15%);
+
+$header-color: #d8ecf8;
+
+$background-light: #f8f9fa;
+// $background-dark: #343a40;
+$background-dark: rgb(41,41,41);
+$border-color: #dee2e6;
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: 'Open Sans', sans-serif;  // Itai 
+
+$font-family-serif: Georgia, "Times New Roman", Times, serif; // Example serif stack
+$font-family-base: $font-family-sans-serif;
+
+// Using rem for font sizes (relative to root html font-size, typically 16px)
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 0.875;
+
+$line-height-base: 1.5;
+$line-height-lg: 1.7;
+$line-height-sm: 1.3;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$h1-size: $font-size-base * 2.5;
+$h2-size: $font-size-base * 2;
+$h3-size: $font-size-base * 1.75;
+$h4-size: $font-size-base * 1.5;
+$h5-size: $font-size-base * 1.25;
+$h6-size: $font-size-base;
+
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+// Base spacing unit using rem
+$spacing-unit-base: 1rem; // Base unit (e.g., 16px)
+
+$spacer-1: $spacing-unit-base * 0.25; // ~4px
+$spacer-2: $spacing-unit-base * 0.5;  // ~8px
+$spacer-3: $spacing-unit-base;        // ~16px
+$spacer-4: $spacing-unit-base * 1.5;  // ~24px
+$spacer-5: $spacing-unit-base * 3;    // ~48px
+
+// -----------------------------------------------------------------------------
+// Borders
+// -------------------------------------------------------------`----------------
+$border-width: 1px; // px is fine for borders
+$border-radius: 0.25rem; // Use rem for scalable corners
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+
+// -----------------------------------------------------------------------------
+// Borders
+// -------------------------------------------------------------`----------------
+$wrapper-max-width: 87rem; // Example: 1120px=70rem, 1140px=87rem
+
+
+// -----------------------------------------------------------------------------
+// Media Query Breakpoint (Simplified: Mobile vs Desktop)
+// -----------------------------------------------------------------------------
+// Single breakpoint to distinguish mobile/tablet from desktop layouts
+$breakpoint-desktop: 768px; // Common tablet landscape / small desktop breakpoint
+
+
+// -----------------------------------------------------------------------------
+// Transitions
+// -----------------------------------------------------------------------------
+$transition-duration-base: 0.2s;
+$transition-timing-function: ease-in-out; // Common easing function

@@ -1,12 +1,27 @@
 ---
 ---
+
 // Site variables
 $screen-sm: 480px;
 
-// Includes	
-@import "main";
+// 1. Variables
+@import "variables";
+
+// 2. Core & Layout
+@import "core";
+
+// 3. Components / Sections
 @import "burger";
 @import "header";
 @import "footer";
+
+// 4. Page-Specific
+// @import "post";
+@import "index";
+@import "portfolio";
+@import "about";
+@import "contact";
+
+// 5. Not sure where these came from
 @import "labeled-heading";
 @import "section";

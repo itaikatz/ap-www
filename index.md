@@ -1,6 +1,6 @@
 ---
 layout: default
-title: index
+title: Applied Photons - Advanced Computer Vision Solutions
 css: assets/css/index.css
 transparent_nav: true
 og_image: assets/images/ap_logo_linkedin.png
@@ -9,83 +9,79 @@ og_url: www.appliedphotons.com
 og_description: Applied Photons is a research and consulting firm dedicated to advancing machine learning, AI, and computer vision to power the next generation of products.
 ---
 
+
+
+
 <div class="banner"> 
 <div id="banner-image"></div>
 <div id="banner-text">
-	<div id="heading-a">Research-Powered Computer Vision<br>for Medical Imaging and Beyond</div>	
-	<div id="heading-b">Solve your most complex imaging challenges with technology that puts you years ahead of industry standards.</div>
-	<a href="contact.html" class="button" id="learn">Discuss Your Challenge</a>
-	<a href="portfolio.html" class="button" id="portfolio">Explore Our Solutions</a>
+	<div id="heading-a">Transforming Complex Visual Challenges into Deployable Technology</div>	
+	<div id="heading-b">Research-driven solutions accelerating development and reducing technical risk across medicine, defense, and industry</div>
+	<a href="contact.html" class="button" id="learn">Get Started</a>
+	<a href="portfolio.html" class="button" id="portfolio">Explore Case Studies</a>
 </div>
 </div>
 
+<div id="problem">
 {% include homepage-section.html 
 	text-on-left=true
-	heading='From Research Papers to Real-World Impact'
-	text='Advanced computer vision innovations often remain confined to academic literature and research labs, unavailable to companies that could benefit from them. 
+	heading='From Complex Vision Concept to Functional Prototype'
+	text='You see the potential. But transforming that complex visual challenge into a working prototype involves navigating significant technical hurdles in hardware selection, algorithm development, and system integration.
 	<br><br>
-	Applied Photons bridges this gap by translating theoretical breakthroughs into practical implementations that solve your most challenging imaging problems.'
-	imgPath='/assets/images/toy_camera.jpg'
+	Imagine having an expert partner to help you confidently overcome those hurdles.'	
+	imgPath='/assets/images/custom_optics2.png'
 %}
+</div>
+<!-- imgPath='/assets/images/toy_camera.jpg' -->
 
 <section class="capabilities">
-	<h2>Our Core Computer Vision Capabilities</h2>
-	<p>Our expertise centers on advanced computer vision technologies, supported by complementary capabilities that deliver end-to-end solutions</p>
-
+	<div class="wrapper">
+	<h2>The Applied Photons Difference</h2>
 	<div class="capabilities-grid">
-
-		<div>
-		Advanced Image Analysis
-		<br><br>
-		Extracting meaningful insights from diverse optical modalities including visible light, infrared, hyperspectral, and polarimetric imaging.
+		<div class="card">
+		<h3 class="card-title">Objectives First, Technology Second</h3>
+		<p class="card-description">We focus on your specific goals first, then select optimal approaches—avoiding unnecessary complexity and ensuring solutions that deliver real value.</p>
 		</div>
-		<div>
-		Machine Learning Integration
-		<br><br>
-		Enhancing vision systems with custom ML models that automate analysis, identify patterns, and improve accuracy for medical and research applications.
+		<div class="card">
+		<h3 class="card-title">Complete Vision System Expertise</h3>
+		<p class="card-description">Our comprehensive knowledge spans the entire vision pipeline, eliminating knowledge gaps and communication challenges that come with multiple specialized vendors.</p>
 		</div>
-		<div>
-		Custom Optical Systems
-		<br><br>
-		Designing specialized hardware configurations that exceed off-the-shelf limitations for unique imaging challenges.
+		<div class="card">
+		<h3 class="card-title">Beyond Off-The-Shelf Technology</h3>
+		<p class="card-description">We adapt breakthrough research techniques to solve real-world challenges, delivering capabilities that exceed commercially available solutions.</p>
 		</div>
-		<div>
-		Real-Time Processing Solutions
-		<br><br>
-		Balancing efficiency with accuracy to enable responsive decision-making in time-sensitive clinical and operational environments. 	
-		</div> 
-		
-
 	</div>
-
+	</div>
 </section>
+
+
 <!--
-{% include homepage-section.html 
-	text-on-left=false
-	heading='Our Core Computer Vision Capabilities'
-	text='
-	Our expertise centers on advanced computer vision technologies, supported by complementary capabilities that deliver end-to-end solutions
-	<br><br>
-	Advanced Image Analysis
-	<br><br>
-	Extracting meaningful insights from diverse optical modalities including visible light, infrared, hyperspectral, and polarimetric imaging.
-	<br><br>
-	Machine Learning Integration
-	<br><br>
-	Enhancing vision systems with custom ML models that automate analysis, identify patterns, and improve accuracy for medical and research applications.
-	<br><br>
-	Custom Optical Systems
-	<br><br>
-	Designing specialized hardware configurations that exceed off-the-shelf limitations for unique imaging challenges.
-	<br><br>
-	Real-Time Processing Solutions
-	<br><br>
-	Balancing efficiency with accuracy to enable responsive decision-making in time-sensitive clinical and operational environments. 	
-	'
-	imgPath='/assets/images/synthetic_datasets.png'
-%}
+<section id="case-studies">
+	<div class="wrapper">
+		<h2>Featured Success Stories [TODO: CAROUSEL]</h2>
+		<div class="case-study-preview-container">
+			<article class="case-study-preview">
+				<h4>Project Highlight: STAR Robot Vision [PLACEHOLDER]</h4>
+				<p>Brief description of the challenge and outcome for the STAR project...</p>
+				<a href="/portfolio/star-robot">Learn More</a>
+			</article>
+			<article class="case-study-preview">
+				<h4>Project Highlight: Advanced Medical Imaging Analysis [PLACEHOLDER]</h4>
+				<p>Brief description of the challenge and outcome for a medical imaging project...</p>
+				<a href="/portfolio/medical-imaging">Learn More</a>
+			</article>
+				<article class="case-study-preview">
+				<h4>Project Highlight: Industrial Defect Detection [PLACEHOLDER]</h4>
+				<p>Brief description of the challenge and outcome for an industrial project...</p>
+				<a href="/portfolio/industrial-inspection">Learn More</a>
+			</article>
+			</div>    
+		<a href="#case-studies" class="btn btn-outline-primary btn-lg">See More Success Stories</a>
+	</div>
+</section>
 -->
 
+<!-- 
 {% include homepage-section.html 
 	text-on-left=false
 	heading='Guided by expertise'
@@ -99,7 +95,7 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 	text='Applied Photons has worked with organizations of all sizes — from startups to government — and in industries from healthcare to defense, policy, construction, and more.'
 	imgPath='/assets/images/custom_optics2.png'
 %}
-
+-->
 <div class='proven-tools'>
 	<h2>Powered by industry-proven tools</h2>
 	<div class='icons'>
@@ -114,7 +110,8 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 		<span>Blender</span>
 		<span>ThreeJS</span>
 	</div>
-</div>
+</div> 
+
 
 
 <!--
@@ -131,13 +128,18 @@ og_description: Applied Photons is a research and consulting firm dedicated to a
 %}
 -->
 
+<section class="closing">
+	<div class="wrapper">
+		<h2>Ready to Transform Your Vision Challenge?</h2>
+		<p>At Applied Photons, we believe technology should serve your objectives, not drive them. By understanding your mission first, we deliver targeted vision solutions that reduce complexity while maximizing impact. Ready to discuss how our approach might benefit your specific vision challenges?</p>    
+		<a id="cta-button" href="{{site.baseurl}}/contact.html" class="button" style="background-color: white; color: black">Schedule a Discovery Call</a>
+		<!-- <a href="/contact" class="btn btn-primary btn-lg">Schedule a Discovery Call</a> -->
+	</div>
+</section>
+<!--
 <div class='sub-header'>
-	<div class='head1'>Work with Applied Photons</div>
-	<div class='head2'>Find out how Applied Photons can help you tackle your most challenging computer vision projects.</div>
-	<a href="{{site.baseurl}}/contact.html" class="button" style="background-color: white; color: black">Book a Call</a>
+	<div class='head1'>Ready to Transform Your Vision Challenge?</div>
+	<div class='head2'>At Applied Photons, we believe technology should serve your objectives, not drive them. By understanding your mission first, we deliver targeted vision solutions that reduce complexity while maximizing impact. Ready to discuss how our approach might benefit your specific vision challenges?</div>
+	<a href="{{site.baseurl}}/contact.html" class="button" style="background-color: white; color: black">Schedule a Discovery Call</a>
 </div>
-
-<!--  
-<h2 style="text-align: center"> Computer vision &#5867; Robotics &#5867; Machine learning </h2>
-
- -->
+-->

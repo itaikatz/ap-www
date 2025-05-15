@@ -1,0 +1,166 @@
+// -----------------------------------------------------------------------------
+// Base Styles (Reset & Defaults)
+// -----------------------------------------------------------------------------
+
+// Apply border-box sizing to all elements for easier layout calculations
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Remove default margin from common elements
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+// Basic HTML and Body setup
+html {
+  font-size: 100%; // Usually 16px, basis for rem units
+  line-height: $line-height-base;
+  -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape on iOS
+  scroll-behavior: smooth; // Smooth scrolling for anchor links
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-base;
+  color: $text-light;
+
+  background-color: $background-dark; // Default white background, can use a variable
+  background-image: url('../images/cubes.png'); // Relative path from compiled CSS location
+  background-repeat: repeat; // Ensure it repeats (this is default but good to be explicit)
+  background-blend-mode: overlay; /* Experiment with different blend modes */
+
+
+  text-rendering: optimizeLegibility; //optimizeSpeed; // Prioritize speed, can use optimizeLegibility if needed
+
+  // Needed to make sure footer is at the bottom of the page if content is short
+  min-height: 100vh; // Make body at least viewport height
+  display: flex; // Turn body into a flex container
+  flex-direction: column; // Stack children (header, main, footer) vertically
+
+}
+
+main {
+    flex-grow: 1; // Allow main content to grow and push footer down
+}
+
+// Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0; // Remove default padding too
+}
+
+// Set core root defaults
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+// Make images responsive by default
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+// Remove default text decoration from links and set base color
+a {
+  color: $link-color;
+  text-decoration: none; // Remove underline by default
+  transition: color $transition-duration-base $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline; // Add underline on hover/focus for clarity
+  }
+}
+
+// Default heading styles using variables
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2; // Slightly tighter line height for headings
+  margin-bottom: $spacer-3; // Add some space below headings
+  color: $header-color;
+}
+
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
+
+// Default paragraph styles
+p {
+  margin-bottom: $spacer-3; // Add space below paragraphs
+}
+
+// Basic list styling (can be customized further)
+ul, ol {
+  padding-left: $spacer-4; // Indent lists
+  margin-bottom: $spacer-3;
+}
+
+li {
+  margin-bottom: $spacer-2; // Space between list items
+}
+
+// -----------------------------------------------------------------------------
+// Layout Styles
+// -----------------------------------------------------------------------------
+
+// General purpose wrapper/container class
+// Sets a max-width and centers content horizontally
+.wrapper {
+    max-width: $wrapper-max-width; // Defined in _variables.scss
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacer-3; // Add horizontal padding for smaller screens
+    padding-right: $spacer-3;
+    width: 100%; // Ensure it takes full width until max-width is reached
+  }
+  
+//  Base vertical padding for sections 
+section {
+    padding-top: $spacer-5; // Example: Use a larger spacer for top padding
+    padding-bottom: $spacer-5; // Example: Use a larger spacer for bottom padding
+  
+    // Optional: Adjust padding on smaller screens if needed
+    // @media (max-width: ($breakpoint-desktop - 1px)) {
+    //   padding-top: $spacer-4;
+    //   padding-bottom: $spacer-4;
+    // }
+  
+    // --- Remove padding from first/last sections if they touch header/footer ---
+    // This assumes <main> directly follows <header> and precedes <footer>
+    // Adjust selectors if your structure differs
+    main > section:first-child {
+      padding-top: $spacer-4; // Reduce top padding on the very first section in main
+                               // Or set to 0 if header/footer have enough padding
+    }
+    main > section:last-child {
+       padding-bottom: $spacer-4; // Reduce bottom padding on the very last section in main
+                                  // Or set to 0
+    }
+  }
+  
+  // Special handling for Hero section if it needs different padding
+  // (e.g., more padding or if it's outside the <main> tag)
+//   #hero {
+     // Override base section padding if necessary
+     // padding-top: $spacer-5 * 1.5;
+     // padding-bottom: $spacer-5 * 1.5;
+  
+     // If hero is first element after header, remove its top padding maybe
+     // padding-top: 0;
+//   }
+
+  // Add any other global layout styles here, e.g., basic grid setup if needed
+
+  

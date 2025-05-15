@@ -1,6 +1,4 @@
----
----
-
+.about-page {
 .banner {
 	z-index: 1;
 	flex: 0;
@@ -17,7 +15,7 @@
 }
 #banner-image {
 	z-index: 1;
-	background-image: url("{{site.baseurl}}/assets/images/washington_dc.jpg");
+	background-image: url("/assets/images/washington_dc.jpg");
 	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(40%);
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -34,6 +32,9 @@
 		background-size:cover;
 		background-position-x: -20px;
 	}
+	mask-image: none;
+	padding-bottom: none;
+	filter: sepia() hue-rotate(180deg) saturate(150%) brightness(100%);
 }
 
 #banner-text {
@@ -73,7 +74,72 @@
 }
 
 .callout {
-	background-color: rgba(31,65,149,.2);
+    background-color: rgb(47,61,94);
+    margin: 40px 0;
+    padding: 40px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+
+    .image {
+      flex: 0 1 150px;
+      text-align: center;
+      margin: 0 40px;
+    }
+
+    img {
+      border-radius: 1000px;
+      height: auto;
+      width: 100%;
+      max-width: 150px;
+    }
+
+    .text {
+      flex: 1 1;
+      text-align: justify;
+      margin-right: 40px;
+      
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // Single media query for mobile adjustments
+  @media only screen and (max-width: 480px) {
+	.callout {
+	  display: block;
+	  
+	  .image {
+		margin: 0 auto 20px;
+		text-align: center;
+		display: flex;          // Add flexbox
+		justify-content: center; // Center horizontally
+	  }
+	  
+	  img {
+		max-width: 50%;
+		width: auto;
+		display: block;         // Prevents inline spacing issues
+		margin: 0 auto;         // Alternative centering approach
+	  }
+	  
+	  .text {
+		margin: 0 20px;
+		
+		h3 {
+		  text-align: center;
+		}
+	  }
+	}
+  }
+
+/*
+.callout {
+	// background-color: rgba(31,65,149,0.2);
+	background-color: rgb(47,61,94);
 	margin: 40px 0;
 	padding: 40px 0;
     border-radius: 5px;
@@ -134,14 +200,6 @@
 
 }
 }
-//@media only screen and (max-width: 400px) {
-//	.callout {
-//		background-color: rgb(255,0,0);	
-//		img {
-//			border: 1px solid black;
-//			width: 50%;
-//		}
-//	}
-//}
+*/
 
-
+}

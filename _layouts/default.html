@@ -24,12 +24,6 @@
 
 	{% endif %}
 
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-	<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans|Roboto|Yrsa&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans|Yrsa&display=swap" rel="stylesheet"> -->
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Yrsa&display=swap" rel="stylesheet">
@@ -40,9 +34,9 @@
 		<link rel="stylesheet" href="{{layout.css}}">
     {% endif %}
 
-	{% if page.css %}
+	<!-- {% if page.css %}
 		<link rel="stylesheet" href="{{page.css}}">
-    {% endif %}
+    {% endif %} -->
 
 	{% if page.layout=='post' %}
 		<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
@@ -72,54 +66,37 @@
   <body>
 
 	<div class="header-wrapper {% if page.transparent_nav==true %} transparent {% endif%}">
-	<header>
-	  <a href="{{site.baseurl}}/index.html" class="logo">
-	  		<!-- <img src="{{site.baseurl}}/assets/images/ap_logo.png"> -->
-	      <span id="Applied">Applied</span><span id="Photons">Photons</span>
-	  </a>
+		<header>
+			<a href="{{site.baseurl}}/index.html" class="logo">
+				<span id="Applied">Applied</span><span id="Photons">Photons</span>
+			</a>
 
+			<nav>
+				<ul class="navigation" role="navigation">
+				<li><a href="{{site.baseurl}}/about.html">About</a></li>
+				<li><a href="{{site.baseurl}}/portfolio.html">Portfolio</a></li>
+				<!-- <li><a href="{{site.baseurl}}/blog.html">Blog</a></li> -->
+				<li><a href="{{site.baseurl}}/contact.html" id="contact-button">Contact</a></li>
+				</ul>
 
-	  <nav>
-	    <ul class="navigation" role="navigation">
-	      <li><a href="{{site.baseurl}}/about.html">About</a></li>
-	      <li><a href="{{site.baseurl}}/portfolio.html">Portfolio</a></li>
-	      <li><a href="{{site.baseurl}}/blog.html">Blog</a></li>
-	      <li><a href="{{site.baseurl}}/contact.html" id="contact-button">Contact</a></li>
-	    </ul>
+				<!-- "Hamburger icon" to toggle the navigation links -->
+				<a href="#" class="menu-button" id="menuButton">
+					<span class="burger-icon"></span>
+				</a>
 
-	  <!-- "Hamburger icon" to toggle the navigation links -->
-	  <a href="#" class="menu-button" id="menuButton">
-	    <span class="burger-icon"></span>
-	  </a>
-
-	  </nav>
-
-	</header>
+			</nav>
+		</header>
 	</div>
-
-  	<div class="page-content">
-    	{{ content }}
-	</div>
-
+	
+	<main>
+		{{ content }}
+	</main>
 
 
 	<footer>
-<!--
-		<div>Applied Photons</div>
-		<div class='footer-menu'>
-			<div>INDUSTRIES</div>
-			<div>EXPERTISE</div>
-			<div>BLOG</div>
-			<div>ABOUT</div>
-		</div>
-		<div>COPYRIGHT © 2022</div>
--->
 		<div class="footer-content">
 			Copyright © <span id="current-year"></span> - Applied Photons LLC
 		</div>
-		<!-- <div class="footer-content">
-		Copyright © 2022 - Applied Photons LLC
-		</div> -->
 	</footer>
 
 

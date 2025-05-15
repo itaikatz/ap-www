@@ -12,6 +12,10 @@ header {
 	a { 
 		text-decoration: none;
 	}
+	a:focus,
+	a:hover {
+		text-decoration: none;		
+	}
 	ul {
 		list-style: none;
 		// font-size: 16px;
@@ -158,7 +162,9 @@ header {
 			align-items: center;
   			transition: color 0.3s;
 		}
+		a:focus,
 		a:hover {
+			text-decoration: none;
 			color: #57a6db;
 		}
 
@@ -180,8 +186,10 @@ header {
 
 	li a {
 		color: #d5e9f6;
+		&:focus,
 		&:hover {
 			color: #57a6db;
+			text-decoration: none;
 		}
 	}
 	
